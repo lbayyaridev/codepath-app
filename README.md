@@ -11,7 +11,7 @@ Group Project - README Template
 
 ## Overview
 ### Description
-[Description of your app]
+In one sentance, Chally is a social media app that focuses on creating and particiapting in chanlanges. This is ment to be a pacle where internet chalanges, such as the ALS Ice Bucket Chalange or Mannequin challange can be posted, shared and disscued. 
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
