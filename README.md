@@ -27,14 +27,18 @@ In one sentance, Chally is a social media app that focuses on creating and parti
 ### 1. User Stories (Required and Optional)
 
 **Required Must-have Stories**
-
-* [fill in your required user stories here]
-* ...
+Editable profile pages.
+Be able to login to acces your own posts.
+Be able to make posts (chanalges) including pictures and videos.
+Be able to view other peoples posts (chalanges).
+Be able to respond to other peoples posts (chalanges).
+Search for posts (chanalges).
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+Private Chats.
+Dark mode.
+App notifications.
 
 ### 2. Screen Archetypes
 
