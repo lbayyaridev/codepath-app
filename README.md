@@ -95,7 +95,124 @@ https://marvelapp.com/4h6j389
 [This section will be completed in Unit 9]
 ### Models
 [Add table of models]
+
+
+
 ### Networking
 - [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
+*Home Screen
+(Read/GET) Query all posts where user is author
+```
+let query = PFQuery(className:"Post")
+query.whereKey("author", equalTo: currentUser)
+query.order(byDescending: "createdAt")
+query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+   if let error = error { 
+      print(error.localizedDescription)
+   } else if let posts = posts {
+      print("Successfully retrieved \(posts.count) posts.")
+  // TODO: Do something with posts...
+   }
+}
+```
+
+(Create/POST) Create a new like on a post
+```
+
+```
+
+(Delete) Delete existing like
+```
+PFObject.deleteAll(inBackground: Like) { (succeeded, error) in
+    if (succeeded) {
+        // The array of objects was successfully deleted.
+    } else {
+        // There was an error. Check the errors localizedDescription.
+    }
+}
+```
+
+(Create/POST) Create a new responce on a post
+```
+    func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
+        // Create the comment
+        let comment = PFObject(className: "Comments")
+        comment["text"] = text
+        comment["post"] = selectedPost
+        comment["author"] = PFUser.current()!
+
+        selectedPost.add(comment, forKey: "comments")
+
+        selectedPost.saveInBackground { (success, error) in
+            if success {
+                print("Comment saved")
+            } else {
+                print("Error saving comment")
+            }
+        }
+```
+
+(Delete) Delete existing responce
+```
+PFObject.deleteAll(inBackground: Responce) { (succeeded, error) in
+    if (succeeded) {
+        // The array of objects was successfully deleted.
+    } else {
+        // There was an error. Check the errors localizedDescription.
+    }
+}
+```
+
+*Post Screen
+(Create/POST) Create a new post object
+```
+let Post = PFObject(className:"Post")
+Post["creator"] = Username
+Post["postText"] = Text
+Post["image"] = false
+Post["video"] = false
+Post["like"] = numofLikes
+Post.saveInBackground { (succeeded, error)  in
+    if (succeeded) {
+        // The object has been saved.
+    } else {
+        // There was a problem, check error.description
+    }
+}
+```
+
+*Profile Screen 
+(Read/GET) Query logged in user object
+```
+let query = PFQuery(className:"Profile")
+query.whereKey("author", equalTo: currentUser)
+query.findObjectsInBackground { (users: [PFObject]?, error: Error?) in
+   if let error = error { 
+      print(error.localizedDescription)
+   } else if let users = users {
+      print("Successfully retrieved \(Profile.Name) .")
+  // TODO: Do something with Profile...
+   }
+}
+```
+
+(Update/PUT) Update user profile image
+```
+let query = PFQuery(className:"Profile")
+query.getObjectInBackground(withId: "xWMyZEGZ") { (Profile: PFObject?, error: Error?) in
+    if let error = error {
+        print(error.localizedDescription)
+    } else if let Profile = Profile {
+        Profile["Name"] = author
+        Profile["image"] = image
+        Profile["Description"] = description
+        Profile.saveInBackground()
+    }
+}
+```
+
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+
+
+
