@@ -102,7 +102,16 @@ https://marvelapp.com/4h6j389
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+| *Property*      | *Type*          | *Description*                                  |   |   |
+|-----------------|-----------------|------------------------------------------------|---|---|
+| objectID        | String          | unique id for the user post (default field)    |   |   |
+| author          | Pointer to User | image author                                   |   |   |
+| challenge_media | File            | challenge that user posts                      |   |   |
+| caption         | String          | challenge caption by author                    |   |   |
+| commentsCount   | Number          | number of comments on a challenge post         |   |   |
+| likesCount      | Number          | number of likes for the challenge post         |   |   |
+| createdAt       | DateTime        | date when post is created (default field)      |   |   |
+| updatedAT       | DateTime        | date when post is last updated (default field) |   |   |
 
 
 
