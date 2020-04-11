@@ -116,11 +116,6 @@ query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
 }
 ```
 
-(Create/POST) Create a new like on a post
-```
-
-```
-
 (Delete) Delete existing like
 ```
 PFObject.deleteAll(inBackground: Like) { (succeeded, error) in
