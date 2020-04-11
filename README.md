@@ -76,12 +76,14 @@ In one sentance, Chally is a social media app that focuses on creating and parti
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
-<img src="https://ibb.co/DC18tvr" width=600>
+<img src="https://i.ibb.co/1q0dLPz/Home.jpg" width=200> <img src="https://i.ibb.co/FghdX6Y/Challenge.jpg" width=200>
+<img src="https://i.ibb.co/B65sDJk/Group.jpg" width=200> <img src="https://i.ibb.co/YZ5HwnN/MSG.jpg" width=200>
+<img src="https://i.ibb.co/R7qsFP6/No-Challenge.jpg" width=200> <img src="https://i.ibb.co/djqLN5N/Send.jpg" width=200>
 
 ### [BONUS] Interactive Prototype
+https://marvelapp.com/4h6j389
 
 ## Schema 
 [This section will be completed in Unit 9]
