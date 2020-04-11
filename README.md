@@ -1,7 +1,7 @@
 Group Project - README Template
 ===
 
-# APP_NAME_HERE
+# Chally
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -15,12 +15,12 @@ In one sentance, Chally is a social media app that focuses on creating and parti
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Category:** Social Networking / Photo & Video
+- **Mobile:** This app would be primarily developed for mobile but would perhaps be just as viable on a computer.
+- **Story:** A platform for users to see current trending challenges and more importantly being able to challenge friends, family and the world.
+- **Market:** Any person who enjoy viewing current trends and participitating in fun challenges.
+- **Habit:** This app could be used as often or as little as possible depending on how free the individual is.
+- **Scope:** First we will make it clear how easy it is to set up challenges with friends. The it could evolve into a platform defning new challenges around the world. Being able to become a platform that intrests other brands for advertising.
 
 ## Product Spec
 
