@@ -79,7 +79,7 @@ In one sentance, Chally is a social media app that focuses on creating and parti
 <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
-![Screenshot](Home.jpg)
+<img src="https://ibb.co/DC18tvr" width=600>
 
 ### [BONUS] Interactive Prototype
 
