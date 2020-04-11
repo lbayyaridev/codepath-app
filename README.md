@@ -38,12 +38,20 @@ In one sentance, Chally is a social media app that focuses on creating and parti
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Login
+* Register - User signs up or logs into their account
+   * Upon downloading or reinstalling the app, the user is prompted to register.
+* Home Screen - Challenges at a glance ( Potential Second Feature)
+  * User gets to view the current challenges happening with their followers.
+* Browse Screen - Trends in the world (Potential Second Feature)
+  * Users gets to view challenges happening around the world and check out new users to follow
+* Groups Screen - View with groups (First Feature)
+  * Users get to see if their groups are active and which ones currently have challenges going on
+* Messaging Screen - Chat with friend or group (First Feature)
+  * Users get to interact and talk about the challenges.
+  * Users can initiate challenges here.
+* Profile Screen
+  * Allows user to upload a photo and fill in information that is interesting to them and others.
 
 ### 3. Navigation
 
