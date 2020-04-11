@@ -80,6 +80,8 @@ App notifications.
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
+<img src="https://i.ibb.co/JvJnqXz/IMG-1968.jpg" width=600>
+<img src="https://i.ibb.co/WHWZZpX/IMG-1969.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 <img src="https://i.ibb.co/1q0dLPz/Home.jpg" width=200> <img src="https://i.ibb.co/FghdX6Y/Challenge.jpg" width=200>
