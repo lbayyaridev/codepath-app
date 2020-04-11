@@ -52,6 +52,10 @@ In one sentance, Chally is a social media app that focuses on creating and parti
   * Users can initiate challenges here.
 * Profile Screen
   * Allows user to upload a photo and fill in information that is interesting to them and others.
+* Setting Screen
+  * Allow users to customize the view of the app such as appearance and language
+* Challenge Screen (Fist Feature)
+  * Allow users to edit their photo / video through tools and customize length of challenge and challenge type.
 
 ### 3. Navigation
 
