@@ -65,18 +65,26 @@ App notifications.
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Group
+* Home
+* Challenge
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Log in screen
+   * Account creation if no log in is available
+
+* Home (Feed)
+   * Browse/Search for Challenges
+   * 
+
+* Group 
+   * Group chats for different challenges
+   
+* Challenge
+   * Snap a picture or a video, the name of the challenge and its description
+   * Set the duration and its media type
+   * Submit the challenge to a group
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
