@@ -49,6 +49,13 @@ class LoginViewController: UIViewController {
             }
             
         }
+        let currentuser = PFUser.current()
+        SBUGlobals.CurrentUser = SBUUser(userId: (currentuser?.objectId)!)
+               SBUMain.connect { (user, error) in
+                   guard error == nil else {   // Error.
+                          return
+                      }
+               }
 
     }
     override func viewDidLoad() {
