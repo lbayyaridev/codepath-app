@@ -8,11 +8,10 @@
 
 import UIKit
 import Parse
+import SendBirdUIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -24,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                        configuration.server = "https://ancient-anchorage-24331.herokuapp.com/parse"
                    })
                )
+        // Initialize SBUIkit
+        let APP_ID = "7EF301FA-FD25-4096-8E46-B5111DEB4359"// The ID of the Sendbird application which UIKit sample app uses.
+           SBUMain.initialize(applicationId: APP_ID)
         return true
     }
 

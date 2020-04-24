@@ -10,6 +10,7 @@ target 'Chally' do
   pod "AlamofireImage"
   pod "MessageInputBar"
   pod "RSKPlaceholderTextView"
+  pod 'SendBirdUIKit'
 
   target 'ChallyTests' do
     inherit! :search_paths

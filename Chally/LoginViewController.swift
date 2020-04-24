@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import SendBirdUIKit
 
 class LoginViewController: UIViewController {
 
@@ -24,9 +25,18 @@ class LoginViewController: UIViewController {
                 print("error logging in")
             }
         }
+        let user = PFUser.current()
+        SBUGlobals.CurrentUser = SBUUser(userId: (user?.objectId)!)
+        SBUMain.connect { (user, error) in
+            guard error == nil else {   // Error.
+                   return
+               }
+        }
         
     }
     @IBAction func onSignUp(_ sender: Any) {
+        // Initialize SendBird
+        SBDMain.initWithApplicationId("7EF301FA-FD25-4096-8E46-B5111DEB4359")
         let user = PFUser()
         user.username = usernameField.text
         user.password = passwordField.text
@@ -39,7 +49,7 @@ class LoginViewController: UIViewController {
             }
             
         }
-        
+
     }
     override func viewDidLoad() {
         super.viewDidLoad()

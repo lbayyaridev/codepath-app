@@ -5,3 +5,7 @@ ${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework
 ${BUILT_PRODUCTS_DIR}/MessageInputBar/MessageInputBar.framework
 ${BUILT_PRODUCTS_DIR}/Parse/Parse.framework
 ${BUILT_PRODUCTS_DIR}/RSKPlaceholderTextView/RSKPlaceholderTextView.framework
+${PODS_ROOT}/SendBirdSDK/SendBirdSDK.framework
+${PODS_ROOT}/SendBirdSDK/SendBirdSDK.framework.dSYM
+${PODS_ROOT}/SendBirdUIKit/SendBirdUIKit.framework
+${PODS_ROOT}/SendBirdUIKit/SendBirdUIKit.framework.dSYM

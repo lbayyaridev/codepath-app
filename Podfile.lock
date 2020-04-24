@@ -11,12 +11,16 @@ PODS:
   - Parse/Core (1.18.0):
     - Bolts/Tasks (= 1.9.1)
   - RSKPlaceholderTextView (6.0.3)
+  - SendBirdSDK (3.0.178)
+  - SendBirdUIKit (1.0.3):
+    - SendBirdSDK (~> 3.0.175)
 
 DEPENDENCIES:
   - AlamofireImage
   - MessageInputBar
   - Parse
   - RSKPlaceholderTextView
+  - SendBirdUIKit
 
 SPEC REPOS:
   trunk:
@@ -26,6 +30,8 @@ SPEC REPOS:
     - MessageInputBar
     - Parse
     - RSKPlaceholderTextView
+    - SendBirdSDK
+    - SendBirdUIKit
 
 SPEC CHECKSUMS:
   Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
@@ -34,7 +40,9 @@ SPEC CHECKSUMS:
   MessageInputBar: e81c7535347f1f7b923de7080409a535a004b6e4
   Parse: 79bdda34fdb7eb2a707a43a951c8aae236cb3e34
   RSKPlaceholderTextView: fc8c8932546298ec9d5e5572284aa42adb87b066
+  SendBirdSDK: 527d6f48f5748d5db838f908ed4ecf1be54314d2
+  SendBirdUIKit: cc209d23658e128887e7477716a6ca3a1b98b658
 
-PODFILE CHECKSUM: cb7b64d25c33e1e1e9bb89663520beb2a8045a0d
+PODFILE CHECKSUM: 76ce74d9868bd6668d92fab1f412e2eee12b6109
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.8.4
