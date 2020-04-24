@@ -12,7 +12,7 @@ import SendBirdUIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         // Initialize Parse
@@ -23,9 +23,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                        configuration.server = "https://ancient-anchorage-24331.herokuapp.com/parse"
                    })
                )
+        
+        if PFUser.current() != nil {
+                   print("current user available")
+                   let main = UIStoryboard(name: "Main", bundle: nil)
+                   let feedNavigationController = main.instantiateViewController(withIdentifier: "TabBarController")
+                   window?.rootViewController = feedNavigationController
+                   window?.makeKeyAndVisible()
+               }else{
+                   print("no current user")
+               }
+        
         // Initialize SBUIkit
-        let APP_ID = "7EF301FA-FD25-4096-8E46-B5111DEB4359"// The ID of the Sendbird application which UIKit sample app uses.
-           SBUMain.initialize(applicationId: APP_ID)
+               let APP_ID = "7EF301FA-FD25-4096-8E46-B5111DEB4359"// The ID of the Sendbird application which UIKit sample app uses.
+                  SBUMain.initialize(applicationId: APP_ID)
         return true
     }
 

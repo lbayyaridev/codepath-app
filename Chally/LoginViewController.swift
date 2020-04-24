@@ -10,35 +10,42 @@ import UIKit
 import Parse
 import SendBirdUIKit
 
+
 class LoginViewController: UIViewController {
+    var window: UIWindow?
 
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBAction func onSignIn(_ sender: Any) {
         let username = usernameField.text!
         let password = passwordField.text!
+        
         PFUser.logInWithUsername(inBackground: username, password: password){
             (user, error) in
             if user != nil{
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                print("success logging in")
+                
+                let user = PFUser.current()
+                SBUGlobals.CurrentUser = SBUUser(userId: (user?.objectId)!)
+                SBUMain.connect { (user, error) in
+                    guard error == nil else {   // Error.
+                        return
+                    }
+                }
             }else{
-                print("error logging in")
+                print("error logging in: \(error?.localizedDescription)")
+                return
             }
         }
-        let user = PFUser.current()
-        SBUGlobals.CurrentUser = SBUUser(userId: (user?.objectId)!)
-        SBUMain.connect { (user, error) in
-            guard error == nil else {   // Error.
-                   return
-               }
-        }
-        SBUMain.updateUserInfo(nickname: user?.username, profileUrl: "") { (error) in
+        print("updating nickname to \(username)")
+        SBUMain.updateUserInfo(nickname: username, profileUrl: "") { (error) in
             guard error == nil else{
                 return
             }
-
+            
         }
-        
+       
     }
     @IBAction func onSignUp(_ sender: Any) {
         // Initialize SendBird
@@ -50,27 +57,41 @@ class LoginViewController: UIViewController {
         user.signUpInBackground{ (success, error) in
             if success {
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                print("success signing up")
+                
+                let current = PFUser.current()
+                print(current?.objectId)
+                SBUGlobals.CurrentUser = SBUUser(userId: (current?.objectId!)!)
+                SBUMain.connect { (user, error) in
+                    guard error == nil else {   // Error.
+                        return
+                    }
+                }
             }else{
-                print("error signing in")
+                print("error signing up: \(error?.localizedDescription)" )
             }
             
         }
-        let currentuser = PFUser.current()
-        SBUGlobals.CurrentUser = SBUUser(userId: (currentuser?.objectId)!)
-               SBUMain.connect { (user, error) in
-                   guard error == nil else {   // Error.
-                          return
+        print("updating nickname to \(usernameField.text)")
+        SBUMain.updateUserInfo(nickname: usernameField.text, profileUrl: "") { (error) in
+                          guard error == nil else{
+                              return
+                          }
+                          
                       }
-               }
-        SBUMain.updateUserInfo(nickname: user.username, profileUrl: "") { (error) in
-            guard error == nil else{
-                return
-            }
-
-        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        if PFUser.current() != nil {
+            print("current user available")
+            let main = UIStoryboard(name: "Main", bundle: nil)
+            let feedNavigationController = main.instantiateViewController(withIdentifier: "TabBarController")
+            window?.rootViewController = feedNavigationController
+            window?.makeKeyAndVisible()
+        }else{
+            print("no current user")
+        }
+
 
         // Do any additional setup after loading the view.
     }
