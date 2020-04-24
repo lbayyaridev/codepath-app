@@ -32,6 +32,12 @@ class LoginViewController: UIViewController {
                    return
                }
         }
+        SBUMain.updateUserInfo(nickname: user?.username, profileUrl: "") { (error) in
+            guard error == nil else{
+                return
+            }
+
+        }
         
     }
     @IBAction func onSignUp(_ sender: Any) {
@@ -56,7 +62,12 @@ class LoginViewController: UIViewController {
                           return
                       }
                }
+        SBUMain.updateUserInfo(nickname: user.username, profileUrl: "") { (error) in
+            guard error == nil else{
+                return
+            }
 
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
