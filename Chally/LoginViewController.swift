@@ -27,7 +27,9 @@ class LoginViewController: UIViewController {
                 print("success logging in")
                 
                 let user = PFUser.current()
-                SBUGlobals.CurrentUser = SBUUser(userId: (user?.objectId)!)
+                print(user?.objectId)
+                print(username)
+                SBUGlobals.CurrentUser = SBUUser(userId: (user?.objectId!)!,nickname: username)
                 SBUMain.connect { (user, error) in
                     guard error == nil else {   // Error.
                         return
