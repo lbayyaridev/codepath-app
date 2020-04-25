@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6633B087CBBFF5D127950576 /* Pods_Chally_ChallyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BEF2DE5BD786BF245FB6448 /* Pods_Chally_ChallyUITests.framework */; };
+		BB451F942453E65100DC5793 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB451F932453E65100DC5793 /* ProfileViewController.swift */; };
 		C42C8F4284741FE6E424D85A /* Pods_Chally.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3351EE904E6B1CAC59F0F74 /* Pods_Chally.framework */; };
 		D74E10982442AC90000380ED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74E10972442AC90000380ED /* LoginViewController.swift */; };
 		D76363E82452A5AF00D0EE9E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76363E72452A5AF00D0EE9E /* FeedViewController.swift */; };
@@ -46,6 +47,7 @@
 		66D034AE4171F0F272C37094 /* Pods-ChallyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallyTests.debug.xcconfig"; path = "Target Support Files/Pods-ChallyTests/Pods-ChallyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8CAFA6CFCD533B12DA8F5A1A /* Pods-ChallyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallyTests.release.xcconfig"; path = "Target Support Files/Pods-ChallyTests/Pods-ChallyTests.release.xcconfig"; sourceTree = "<group>"; };
 		B114052C8C1A69DAFC0D2BA7 /* Pods-Chally.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chally.debug.xcconfig"; path = "Target Support Files/Pods-Chally/Pods-Chally.debug.xcconfig"; sourceTree = "<group>"; };
+		BB451F932453E65100DC5793 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D4AD054866B05CB1CA113CFE /* Pods-Chally.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chally.release.xcconfig"; path = "Target Support Files/Pods-Chally/Pods-Chally.release.xcconfig"; sourceTree = "<group>"; };
 		D74E10972442AC90000380ED /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D76363E72452A5AF00D0EE9E /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				D74E10972442AC90000380ED /* LoginViewController.swift */,
 				D76363E72452A5AF00D0EE9E /* FeedViewController.swift */,
 				D76363E92452A70700D0EE9E /* CameraViewController.swift */,
+				BB451F932453E65100DC5793 /* ProfileViewController.swift */,
 			);
 			path = Chally;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB451F942453E65100DC5793 /* ProfileViewController.swift in Sources */,
 				D74E10982442AC90000380ED /* LoginViewController.swift in Sources */,
 				D76363EA2452A70700D0EE9E /* CameraViewController.swift in Sources */,
 				D7A1BDF3244257BC006AAFC4 /* AppDelegate.swift in Sources */,
