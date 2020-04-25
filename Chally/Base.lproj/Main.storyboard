@@ -197,7 +197,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ofa-Wd-Bgm">
-                                <rect key="frame" x="80" y="111" width="214" height="205"/>
+                                <rect key="frame" x="80" y="142" width="214" height="205"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
@@ -221,26 +221,29 @@
                                     <navigationItem title="Add Post" id="NqA-zw-DKl"/>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Find a challenge" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Nl-1q-a5K">
-                                <rect key="frame" x="105" y="68" width="165" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6hq-J3-V7m">
+                                <rect key="frame" x="105" y="357" width="165" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <searchBar contentMode="redraw" fixedFrame="YES" prompt="Type a challenge" placeholder="Search for a challenge" showsSearchResultsButton="YES" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="doT-ZE-B1d">
+                                <rect key="frame" x="0.0" y="44" width="375" height="90"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="10" vertical="10"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsj-IR-PHv">
-                                <rect key="frame" x="105" y="367" width="165" height="37"/>
+                                <rect key="frame" x="105" y="410" width="165" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="onSubmitButton:" destination="jAm-Gc-etq" eventType="touchUpInside" id="nJM-6T-cuv"/>
+                                    <segue destination="NCy-DG-EJ6" kind="popoverPresentation" popoverAnchorView="gsj-IR-PHv" id="SD5-uQ-m4z">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6hq-J3-V7m">
-                                <rect key="frame" x="105" y="325" width="165" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="rlD-gO-a3x"/>
@@ -249,6 +252,7 @@
                     <connections>
                         <outlet property="commentField" destination="6hq-J3-V7m" id="w8j-ce-ZTB"/>
                         <outlet property="imageView" destination="ofa-Wd-Bgm" id="1Hb-Ya-hgO"/>
+                        <outlet property="searchBar" destination="doT-ZE-B1d" id="8Cl-9b-fEa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G6q-rZ-E2X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -336,12 +340,12 @@
             </objects>
             <point key="canvasLocation" x="204" y="573"/>
         </scene>
-        <!--Home-->
+        <!--FeedViewController-->
         <scene sceneID="CKw-Wo-Me0">
             <objects>
-                <viewController id="NCy-DG-EJ6" customClass="FeedViewController" customModule="Chally" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="FeedViewController" id="NCy-DG-EJ6" customClass="FeedViewController" customModule="Chally" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rby-pa-8ix">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NWe-lu-7rI">
@@ -433,11 +437,11 @@
                                             <outlet property="usernameLabel" destination="fSQ-JA-ebo" id="miB-w5-G8u"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddCommentCell" id="PDv-nX-N3i">
-                                        <rect key="frame" x="0.0" y="462" width="375" height="447"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddCommentCell" rowHeight="20" id="PDv-nX-N3i">
+                                        <rect key="frame" x="0.0" y="462" width="375" height="20"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PDv-nX-N3i" id="sfS-BV-Rda">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="447"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add a comment..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDh-yD-NBJ">
@@ -461,7 +465,6 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="SsN-tX-Bnp" id="0Vh-eS-ll7"/>
-                        <segue destination="jAm-Gc-etq" kind="presentation" id="bf3-Pz-CvQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EZ0-vG-Ml0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -561,7 +564,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="TBU-xb-f3u"/>
+        <segue reference="SD5-uQ-m4z"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bubble.middle.bottom.fill" catalog="system" width="128" height="110"/>

@@ -14,6 +14,7 @@ import SendBirdUIKit
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     
+    @IBOutlet weak var searchBar: UISearchBar!
     
     @IBOutlet weak var commentField: UITextField!
     @IBAction func onCameraButton(_ sender: Any) {
@@ -48,6 +49,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         post.saveInBackground{ (success, error) in
             if success{
                 self.dismiss(animated: true, completion: nil)
+                
             }else{
                 print(error?.localizedDescription)
             }

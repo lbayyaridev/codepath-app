@@ -38,15 +38,9 @@ class LoginViewController: UIViewController {
                 return
             }
         }
-        print("updating nickname to \(username)")
-        SBUMain.updateUserInfo(nickname: username, profileUrl: "") { (error) in
-            guard error == nil else{
-                return
-            }
-            
-        }
-       
+   
     }
+       
     @IBAction func onSignUp(_ sender: Any) {
         // Initialize SendBird
         SBDMain.initWithApplicationId("7EF301FA-FD25-4096-8E46-B5111DEB4359")
@@ -58,27 +52,18 @@ class LoginViewController: UIViewController {
             if success {
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
                 print("success signing up")
-                
-                let current = PFUser.current()
-                print(current?.objectId)
-                SBUGlobals.CurrentUser = SBUUser(userId: (current?.objectId!)!)
+                SBUGlobals.CurrentUser = SBUUser(userId: user.objectId!,nickname: user.username)
                 SBUMain.connect { (user, error) in
                     guard error == nil else {   // Error.
                         return
                     }
                 }
             }else{
-                print("error signing up: \(error?.localizedDescription)" )
+                print("error signing up: \(String(describing: error?.localizedDescription))" )
             }
             
         }
-        print("updating nickname to \(usernameField.text)")
-        SBUMain.updateUserInfo(nickname: usernameField.text, profileUrl: "") { (error) in
-                          guard error == nil else{
-                              return
-                          }
-                          
-                      }
+      
     }
     override func viewDidLoad() {
         super.viewDidLoad()

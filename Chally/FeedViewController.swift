@@ -94,8 +94,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let post = posts[indexPath.section]
         let comments = (post["comments"] as? [PFObject]) ?? []
-        print("indexPath.row = \(indexPath.row)")
-        print("comments.count = \(comments.count)")
+        //print("indexPath.row = \(indexPath.row)")
+        //print("comments.count = \(comments.count)")
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
             let user = post["author"] as! PFUser
@@ -111,11 +111,12 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             cell.photoView.af_setImage(withURL: url)
             return cell
         }else if indexPath.row <= comments.count{
+            print("HERE")
             let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as! CommentCell
-            
             let comment = comments[indexPath.row - 1]
+            print("comment: \(comment["text"] as? String)")
             cell.commentLabel.text = comment["text"] as? String
-            
+            //cell.commentLabel.text = ""
             let user = comment["author"] as! PFUser
             cell.usernameLabel.text = user.username
             print("USERNAME:\(user.username)")
