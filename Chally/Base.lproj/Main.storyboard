@@ -172,6 +172,9 @@
                                 <rect key="frame" x="140" y="459" width="96" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save changes"/>
+                                <connections>
+                                    <action selector="onSaveButton:" destination="tGB-Tu-HFn" eventType="touchUpInside" id="xrI-Ar-a6t"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2mw-B3-G99">
                                 <rect key="frame" x="104" y="73" width="169" height="170"/>
@@ -188,7 +191,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="w36-eC-4aD"/>
                     <connections>
+                        <outlet property="bioField" destination="2i3-jr-EM6" id="y8s-Wv-CbL"/>
                         <outlet property="imageView" destination="2mw-B3-G99" id="CKu-2B-4X4"/>
+                        <outlet property="profileNameField" destination="AaK-rc-6vA" id="mUj-cT-9fg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WJG-S4-KaW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
