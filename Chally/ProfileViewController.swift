@@ -8,10 +8,13 @@
 
 import UIKit
 import AlamofireImage
+import Parse
 
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var bioField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var profileNameField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,14 +45,46 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     
-    /*
-    // MARK: - Navigation
+    @IBAction func onSaveButton(_ sender: Any) {
+        let imageData = imageView.image!.pngData()
+        let file = PFFileObject(data: imageData!)
+        
+        let query = PFQuery(className:"Profile")
+        query.getObjectInBackground(withId: "9nBJK1WEQZ") { (profile: PFObject?, error: Error?) in
+            if let error = error {
+                        let profile = PFObject(className: "Profile")
+                
+                profile["owner"] = PFUser.current()!
+                profile["name"] = self.profileNameField.text
+                profile["bio"] = self.bioField.text
+                profile["image"] = file
+                
+                profile.saveInBackground { (success, error) in
+                    if success {
+                        print("success made new profile!")
+                    } else {
+                        print("error updating profile!")
+                    }
+                }
+                
+                
+                
+            } else if let profile = profile {
+                profile["name"] = self.profileNameField.text
+                profile["bio"] = self.bioField.text
+                profile["image"] = file
+                profile.saveInBackground { (success, error) in
+                    if success {
+                        print("success made new profile!")
+                    } else {
+                        print("error updating profile!")
+                    }
+                }
+                
+            }
+        }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }
