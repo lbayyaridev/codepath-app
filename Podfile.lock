@@ -1,62 +1,48 @@
 PODS:
-  - Alamofire (4.9.1)
-  - AlamofireImage (3.6.0):
-    - Alamofire (~> 4.9)
+  - Alamofire (5.1.0)
+  - AlamofireImage (4.1.0):
+    - Alamofire (~> 5.1)
   - Bolts/Tasks (1.9.1)
-  - FLAnimatedImage (1.0.12)
   - MessageInputBar (0.4.1):
     - MessageInputBar/Core (= 0.4.1)
   - MessageInputBar/Core (0.4.1)
-  - NYTPhotoViewer (1.1.0):
-    - NYTPhotoViewer/AnimatedGifSupport (= 1.1.0)
-    - NYTPhotoViewer/Core (= 1.1.0)
-  - NYTPhotoViewer/AnimatedGifSupport (1.1.0):
-    - FLAnimatedImage (~> 1.0.8)
-    - NYTPhotoViewer/Core
-  - NYTPhotoViewer/Core (1.1.0)
   - Parse (1.18.0):
     - Parse/Core (= 1.18.0)
   - Parse/Core (1.18.0):
     - Bolts/Tasks (= 1.9.1)
-  - RSKImageCropper (2.2.3)
   - RSKPlaceholderTextView (6.0.3)
-  - SendBirdSDK (3.0.179)
+  - SendBirdSDK (3.0.178)
+  - SendBirdUIKit (1.0.3):
+    - SendBirdSDK (~> 3.0.175)
 
 DEPENDENCIES:
-  - AlamofireImage (~> 3.4)
-  - FLAnimatedImage (~> 1.0)
+  - AlamofireImage
   - MessageInputBar
-  - NYTPhotoViewer (~> 1.1.0)
   - Parse
-  - RSKImageCropper
   - RSKPlaceholderTextView
-  - SendBirdSDK
+  - SendBirdUIKit
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireImage
     - Bolts
-    - FLAnimatedImage
     - MessageInputBar
-    - NYTPhotoViewer
     - Parse
-    - RSKImageCropper
     - RSKPlaceholderTextView
     - SendBirdSDK
+    - SendBirdUIKit
 
 SPEC CHECKSUMS:
-  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  AlamofireImage: be9963c6582d68b39e89191f64c82a7d7bf40fdd
+  Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
+  AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
   Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
-  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   MessageInputBar: e81c7535347f1f7b923de7080409a535a004b6e4
-  NYTPhotoViewer: e80e8767f3780d2df37c6f72cbab15d6c7232911
   Parse: 79bdda34fdb7eb2a707a43a951c8aae236cb3e34
-  RSKImageCropper: a446db0e8444a036b34f3c43db01b2373baa4b2a
   RSKPlaceholderTextView: fc8c8932546298ec9d5e5572284aa42adb87b066
-  SendBirdSDK: c16c053159760122a553e40ffe7c6d7c4cda368b
+  SendBirdSDK: 527d6f48f5748d5db838f908ed4ecf1be54314d2
+  SendBirdUIKit: cc209d23658e128887e7477716a6ca3a1b98b658
 
-PODFILE CHECKSUM: 16fd863931af23d730ada6bb721ada67cede49b6
+PODFILE CHECKSUM: 76ce74d9868bd6668d92fab1f412e2eee12b6109
 
 COCOAPODS: 1.9.1

@@ -1,21 +1,24 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '9.0'
+# platform :ios, '9.0'
 
-target 'SendBird-iOS' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+target 'Chally' do
+  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for SendBird-iOS
-
-  pod 'SendBirdSDK'
-  pod 'AlamofireImage', '~> 3.4'
-  pod 'RSKImageCropper'
-  pod 'NYTPhotoViewer', '~> 1.1.0'
-  pod 'FLAnimatedImage', '~> 1.0'
-
+  # Pods for Chally
   pod "Parse"
-  pod "RSKPlaceholderTextView"
+  pod "AlamofireImage"
   pod "MessageInputBar"
+  pod "RSKPlaceholderTextView"
+  pod 'SendBirdUIKit'
 
+  target 'ChallyTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'ChallyUITests' do
+    # Pods for testing
+  end
 
 end

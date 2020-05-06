@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "SBDTypes.h"
-#import "SBDMessageMetaArray.h"
 
 @class SBDUser;
 
@@ -38,15 +37,9 @@
 
 /**
  Meta array keys.
- @deprecated in 3.0.179 Use `metaArrays` instead
+ @since 3.0.116
  */
-@property (copy, nonatomic, nullable) NSArray<NSString *> *metaArrayKeys DEPRECATED_ATTRIBUTE;
-
-/**
- Meta array with keys and values
- @since 3.0.179
- */
-@property (copy, nonatomic, nullable) NSArray<SBDMessageMetaArray *> *metaArrays;
+@property (copy, nonatomic, nullable) NSArray<NSString *> *metaArrayKeys;
 
 /**
  *
