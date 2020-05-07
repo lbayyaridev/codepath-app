@@ -45,7 +45,7 @@ class ChallyGroupViewController: UIViewController, UIImagePickerControllerDelega
         let post = PFObject(className: "Posts")
     
         post["caption"] = commentField.text!
-        //post["author"] = PFUser.current()!
+        post["author"] = PFUser.current()!
         let imageData = imageView.image!.pngData()
         let file = PFFileObject(data: imageData!)
         post["image"] = file
@@ -54,6 +54,7 @@ class ChallyGroupViewController: UIViewController, UIImagePickerControllerDelega
         post["groupid"] = groupID?.channelUrl
         post["challenge"] = challengeName
         post["original"] = true
+        post["local"] = true
         
         // Need to create a error if trying to add existing challenge
         

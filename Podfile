@@ -8,10 +8,11 @@ target 'SendBird-iOS' do
   # Pods for SendBird-iOS
 
   pod 'SendBirdSDK'
-  pod 'AlamofireImage', '~> 3.4'
+  pod 'AlamofireImage'
   pod 'RSKImageCropper'
   pod 'NYTPhotoViewer', '~> 1.1.0'
   pod 'FLAnimatedImage', '~> 1.0'
+  pod 'SDWebImage'
 
   pod "Parse"
   pod "RSKPlaceholderTextView"

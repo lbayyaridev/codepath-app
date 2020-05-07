@@ -20,16 +20,20 @@ PODS:
     - Bolts/Tasks (= 1.9.1)
   - RSKImageCropper (2.2.3)
   - RSKPlaceholderTextView (6.0.3)
+  - SDWebImage (5.7.4):
+    - SDWebImage/Core (= 5.7.4)
+  - SDWebImage/Core (5.7.4)
   - SendBirdSDK (3.0.179)
 
 DEPENDENCIES:
-  - AlamofireImage (~> 3.4)
+  - AlamofireImage
   - FLAnimatedImage (~> 1.0)
   - MessageInputBar
   - NYTPhotoViewer (~> 1.1.0)
   - Parse
   - RSKImageCropper
   - RSKPlaceholderTextView
+  - SDWebImage
   - SendBirdSDK
 
 SPEC REPOS:
@@ -43,6 +47,7 @@ SPEC REPOS:
     - Parse
     - RSKImageCropper
     - RSKPlaceholderTextView
+    - SDWebImage
     - SendBirdSDK
 
 SPEC CHECKSUMS:
@@ -55,8 +60,9 @@ SPEC CHECKSUMS:
   Parse: 79bdda34fdb7eb2a707a43a951c8aae236cb3e34
   RSKImageCropper: a446db0e8444a036b34f3c43db01b2373baa4b2a
   RSKPlaceholderTextView: fc8c8932546298ec9d5e5572284aa42adb87b066
+  SDWebImage: 48b88379b798fd1e4298f95bb25d2cdabbf4deb3
   SendBirdSDK: c16c053159760122a553e40ffe7c6d7c4cda368b
 
-PODFILE CHECKSUM: 16fd863931af23d730ada6bb721ada67cede49b6
+PODFILE CHECKSUM: 1129a5cfa7929eba23f151e95145a09082e91719
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.8.4

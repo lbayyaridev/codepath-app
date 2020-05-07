@@ -11,6 +11,7 @@ import Parse
 import AlamofireImage
 import MessageInputBar
 import SendBirdSDK
+import SDWebImage
 
 class SingleChallengeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MessageInputBarDelegate {
 
@@ -55,7 +56,7 @@ class SingleChallengeViewController: UIViewController, UITableViewDelegate, UITa
                 let imageFile = object["image"] as! PFFileObject
                 let urlString = imageFile.url!
                 let url = URL(string: urlString)!
-                challengePic.af_setImage(withURL: url)
+                challengePic.sd_setImage(with: url, completed: nil)
             }
         } catch {
             print(error)
@@ -101,8 +102,7 @@ class SingleChallengeViewController: UIViewController, UITableViewDelegate, UITa
         
         comment["text"] = text
         comment["post"] = selectedPost
-        //comment["author"] = PFUser.current()!
-        comment["author"] = "Laith"
+        comment["author"] = PFUser.current()!
         
         selectedPost.add(comment, forKey: "comments")
 
@@ -145,9 +145,8 @@ class SingleChallengeViewController: UIViewController, UITableViewDelegate, UITa
             
             
             
-            //let user = post["author"] as! PFUser
-            let user = "Laith"
-            cell.usernameLabel.text = user
+            let user = post["author"] as! PFUser
+            cell.usernameLabel.text = user.username
             
             cell.captionLabel.text = post["caption"] as? String
             
@@ -157,7 +156,7 @@ class SingleChallengeViewController: UIViewController, UITableViewDelegate, UITa
             print(urlString)
             let url = URL(string: urlString)!
             
-            cell.photoView.af_setImage(withURL: url)
+            cell.photoView.sd_setImage(with: url, completed: nil)
             
             return cell
         } else if indexPath.row <= comments.count {
@@ -166,9 +165,8 @@ class SingleChallengeViewController: UIViewController, UITableViewDelegate, UITa
             let comment = comments[indexPath.row - 1]
             cell.commentLabel.text = comment["text"] as? String
             
-            //let user = comment["author"] as! PFUser
-            let user = "Laith"
-            cell.nameLabel.text = user
+            let user = comment["author"] as! PFUser
+            cell.nameLabel.text = user.username
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell")!

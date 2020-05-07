@@ -9,6 +9,7 @@
 import UIKit
 import Parse
 import AlamofireImage
+import SDWebImage
 
 class ItemCell: UICollectionViewCell {
 
@@ -28,7 +29,7 @@ class ItemCell: UICollectionViewCell {
     func setImage(pic: PFFileObject) {
         let urlString = pic.url!
         let url = URL(string: urlString)!
-        self.imageView.af_setImage(withURL: url)
+        self.imageView.sd_setImage(with: url, completed: nil)
     }
 }
 

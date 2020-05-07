@@ -9,6 +9,7 @@
 import UIKit
 import SendBirdSDK
 import Photos
+import Parse
 
 class LoginViewController: UIViewController, UITextFieldDelegate, NotificationDelegate {
     
@@ -50,7 +51,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, NotificationDe
             self.userIdTextField.text = userId
         }
         if let nickname = UserDefaults.standard.object(forKey: "sendbird_user_nickname") as? String {
-            self.nicknameTextField.text = nickname
+            self.userIdTextField.text = nickname
         }
         
         // Version
@@ -65,7 +66,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, NotificationDe
         
         let autoLogin = UserDefaults.standard.bool(forKey: "sendbird_auto_login")
         if autoLogin {
-            self.connect()
+            //self.connect()
         }
     }
     
@@ -101,9 +102,41 @@ class LoginViewController: UIViewController, UITextFieldDelegate, NotificationDe
     
     // MARK: - IBAction
     @IBAction func didTapConnectButton() {
-        self.connect()
+        let username = userIdTextField.text!
+        let password = nicknameTextField.text!
+        
+        PFUser.logInWithUsername(inBackground: username, password: password){
+            (user, error) in
+            if user != nil{
+                self.connect()
+                print("success logging in")
+                let user = PFUser.current()
+                print(user?.objectId)
+                print(username)
+            }else{
+                print("error logging in: \(error?.localizedDescription)")
+                return
+            }
+        }
+
     }
     
+    @IBAction func didTapSignUp(_ sender: Any) {
+        let user = PFUser()
+        user.username = userIdTextField.text
+        user.password = nicknameTextField.text
+        
+        user.signUpInBackground{ (success, error) in
+            if success {
+                self.connect()
+                print("success signing up")
+            }else{
+                print("error signing up: \(String(describing: error?.localizedDescription))" )
+            }
+            
+        }
+        
+    }
     // MARK: - Functions
     // Animation during showing / hiding keyboard
     func animateUI(_ scrollValue: CGFloat) {
@@ -121,19 +154,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate, NotificationDe
     
     func connect() {
         self.view.endEditing(true)
-        if SBDMain.getConnectState() == .open {
-            SBDMain.disconnect {
-                DispatchQueue.main.async {
-                    self.setUIsForDefault()
-                }
-            }
-        }
-        else {
+
             let userId = self.userIdTextField.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-            let nickname = self.nicknameTextField.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+            let nickname = self.userIdTextField.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
             
             guard let id = userId, let nick = nickname else {
-                Utils.showAlertController(title: "Error", message: "User ID and Nickname are required.", viewController: self)
+                Utils.showAlertController(title: "Error", message: "User ID is required.", viewController: self)
                 
                 return
             }
@@ -161,7 +187,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, NotificationDe
                 }
             }
         }
-    }
+    
     
     // MARK: - UITextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -192,7 +218,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, NotificationDe
         self.userIdTextField.isEnabled = false
         self.nicknameTextField.isEnabled = false
         self.connectButton.isEnabled = false
-        self.connectButton.setTitle("Connecting...", for: .normal)
+        //self.connectButton.setTitle("Connecting...", for: .normal)
     }
     
     private func setUIsForDefault() {

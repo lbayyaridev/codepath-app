@@ -13,7 +13,7 @@
         <!--Group Channels-->
         <scene sceneID="hLV-cw-Lnu">
             <objects>
-                <viewController storyboardIdentifier="GroupChannelsViewController" title="Group Channels" id="EhS-Sz-WvI" customClass="GroupChannelsViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GroupChannelsViewController" title="Group Channels" id="EhS-Sz-WvI" customClass="GroupChannelsViewController" customModule="Chally" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="eLG-qZ-maB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,14 +22,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="GroupChannelTableViewCell" rowHeight="80" id="yPq-Ws-8k2" customClass="GroupChannelTableViewCell" customModule="SendBird_iOS" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="GroupChannelTableViewCell" rowHeight="80" id="yPq-Ws-8k2" customClass="GroupChannelTableViewCell" customModule="Chally" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yPq-Ws-8k2" id="3Mb-k0-QK9">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vKG-0L-bRa" userLabel="Cover Image Container View" customClass="ProfileImageView" customModule="SendBird_iOS" customModuleProvider="target">
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vKG-0L-bRa" userLabel="Cover Image Container View" customClass="ProfileImageView" customModule="Chally" customModuleProvider="target">
                                                     <rect key="frame" x="10" y="12" width="56" height="56"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -191,7 +191,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="jJZ-tQ-QH6" customClass="CustomActivityIndicatorView" customModule="SendBird_iOS" customModuleProvider="target">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="jJZ-tQ-QH6" customClass="CustomActivityIndicatorView" customModule="Chally" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </activityIndicatorView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There are no group channels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8e-Li-fJv" userLabel="Empty Label">
@@ -268,7 +268,7 @@
         <!--Create Group Channel View ControllerA-->
         <scene sceneID="8yP-Fc-6PN">
             <objects>
-                <viewController id="Fl6-Bo-p2e" customClass="CreateGroupChannelViewControllerA" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Fl6-Bo-p2e" customClass="CreateGroupChannelViewControllerA" customModule="Chally" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="CZZ-Nk-GZ1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -320,7 +320,7 @@
         <!--Group Posts-->
         <scene sceneID="drK-JE-9C2">
             <objects>
-                <viewController title="Group Posts" id="GHz-H9-ZF5" customClass="ChallengesViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Group Posts" id="GHz-H9-ZF5" customClass="ChallengesViewController" customModule="Chally" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ss1-Wi-A8s">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -372,7 +372,7 @@
         <!--Create Group Channel View ControllerB-->
         <scene sceneID="Wn7-n2-2m4">
             <objects>
-                <viewController id="tAb-gt-fTY" customClass="CreateGroupChannelViewControllerB" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tAb-gt-fTY" customClass="CreateGroupChannelViewControllerB" customModule="Chally" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="8XQ-du-yqF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -387,7 +387,7 @@
                                             <constraint firstAttribute="height" constant="1" id="MW9-Ze-EnY"/>
                                         </constraints>
                                     </view>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="enQ-e3-Xx7" userLabel="Profile Image View" customClass="ProfileImageView" customModule="SendBird_iOS" customModuleProvider="target">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="enQ-e3-Xx7" userLabel="Profile Image View" customClass="ProfileImageView" customModule="Chally" customModuleProvider="target">
                                         <rect key="frame" x="16" y="10" width="100" height="100"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -457,7 +457,7 @@
         <!--Group Channel Settings View Controller-->
         <scene sceneID="bLH-0x-LVR">
             <objects>
-                <viewController id="WkL-XQ-enD" customClass="GroupChannelSettingsViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WkL-XQ-enD" customClass="GroupChannelSettingsViewController" customModule="Chally" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Gun-vA-b8P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -466,14 +466,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="GroupChannelSettingsChannelCoverNameTableViewCell" rowHeight="139" id="8Gx-IQ-dRY" customClass="GroupChannelSettingsChannelCoverNameTableViewCell" customModule="SendBird_iOS" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="GroupChannelSettingsChannelCoverNameTableViewCell" rowHeight="139" id="8Gx-IQ-dRY" customClass="GroupChannelSettingsChannelCoverNameTableViewCell" customModule="Chally" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="139"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Gx-IQ-dRY" id="jq0-6n-4DY">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="139"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N1o-o4-DhA" customClass="ProfileImageView" customModule="SendBird_iOS" customModuleProvider="target">
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N1o-o4-DhA" customClass="ProfileImageView" customModule="Chally" customModuleProvider="target">
                                                     <rect key="frame" x="15" y="19.5" width="100" height="100"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -520,7 +520,7 @@
                                             <outlet property="profileImageView" destination="N1o-o4-DhA" id="wB2-qH-EOH"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="GroupChannelSettingsNotificationsTableViewCell" id="3iE-b0-fOz" customClass="GroupChannelSettingsNotificationsTableViewCell" customModule="SendBird_iOS" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="GroupChannelSettingsNotificationsTableViewCell" id="3iE-b0-fOz" customClass="GroupChannelSettingsNotificationsTableViewCell" customModule="Chally" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="194.5" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3iE-b0-fOz" id="ExI-Tt-16h">
@@ -572,7 +572,7 @@
                                             <outlet property="notificationSwitch" destination="aDs-5Z-AJ0" id="zjw-Fp-w4w"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="GroupChannelSettingsInviteMemberTableViewCell" id="hCz-xY-8Ou" customClass="GroupChannelSettingsInviteMemberTableViewCell" customModule="SendBird_iOS" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="GroupChannelSettingsInviteMemberTableViewCell" id="hCz-xY-8Ou" customClass="GroupChannelSettingsInviteMemberTableViewCell" customModule="Chally" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="238" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hCz-xY-8Ou" id="Cs5-rT-v66">
@@ -613,7 +613,7 @@
                                         </constraints>
                                         <viewLayoutGuide key="safeArea" id="V39-Qs-5aR"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="GroupChannelSettingsMemberTableViewCell" id="QcM-9p-84f" customClass="GroupChannelSettingsMemberTableViewCell" customModule="SendBird_iOS" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="GroupChannelSettingsMemberTableViewCell" id="QcM-9p-84f" customClass="GroupChannelSettingsMemberTableViewCell" customModule="Chally" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="281.5" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QcM-9p-84f" id="i1s-eD-u4C">
@@ -707,7 +707,7 @@
                                             <outlet property="statusLabel" destination="IqO-z2-Bci" id="eeX-cF-aqg"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="GroupChannelSettingsLeaveChatTableViewCell" id="p2Q-Ab-WjV" customClass="GroupChannelSettingsLeaveChatTableViewCell" customModule="SendBird_iOS" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="GroupChannelSettingsLeaveChatTableViewCell" id="p2Q-Ab-WjV" customClass="GroupChannelSettingsLeaveChatTableViewCell" customModule="Chally" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="325" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p2Q-Ab-WjV" id="O31-ib-vWw">
@@ -752,7 +752,7 @@
                                 </prototypes>
                                 <sections/>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="rwK-2P-xCz" customClass="CustomActivityIndicatorView" customModule="SendBird_iOS" customModuleProvider="target">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="rwK-2P-xCz" customClass="CustomActivityIndicatorView" customModule="Chally" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </activityIndicatorView>
                         </subviews>
@@ -784,7 +784,7 @@
         <!--Group Channel Invite Member View Controller-->
         <scene sceneID="Qpi-zN-Ouk">
             <objects>
-                <viewController id="LMb-Wy-W9e" customClass="GroupChannelInviteMemberViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LMb-Wy-W9e" customClass="GroupChannelInviteMemberViewController" customModule="Chally" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="hLs-Cx-SLb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -807,7 +807,7 @@
                                 <rect key="frame" x="0.0" y="114" width="375" height="553"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="s9c-PZ-Xm6" customClass="CustomActivityIndicatorView" customModule="SendBird_iOS" customModuleProvider="target">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="s9c-PZ-Xm6" customClass="CustomActivityIndicatorView" customModule="Chally" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </activityIndicatorView>
                         </subviews>
@@ -842,7 +842,7 @@
         <!--User Profile View Controller-->
         <scene sceneID="0NW-gW-V8x">
             <objects>
-                <viewController id="A0V-Hi-H9j" customClass="UserProfileViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="A0V-Hi-H9j" customClass="UserProfileViewController" customModule="Chally" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2Ic-q1-H33">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -929,7 +929,7 @@
         <!--Group Channel Cover Image Name Setting View Controller-->
         <scene sceneID="nkL-dV-0YB">
             <objects>
-                <viewController id="uUn-AC-KUB" customClass="GroupChannelCoverImageNameSettingViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uUn-AC-KUB" customClass="GroupChannelCoverImageNameSettingViewController" customModule="Chally" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Dju-38-emj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -937,7 +937,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0du-kn-47v" userLabel="Container View">
                                 <rect key="frame" x="0.0" y="44" width="375" height="120"/>
                                 <subviews>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgc-FM-u7u" customClass="ProfileImageView" customModule="SendBird_iOS" customModuleProvider="target">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgc-FM-u7u" customClass="ProfileImageView" customModule="Chally" customModuleProvider="target">
                                         <rect key="frame" x="15" y="10" width="100" height="100"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -987,7 +987,7 @@
                                     <constraint firstAttribute="bottom" secondItem="sWh-6V-hSL" secondAttribute="bottom" id="tqW-ZP-2le"/>
                                 </constraints>
                             </view>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gwk-HN-GE3" customClass="CustomActivityIndicatorView" customModule="SendBird_iOS" customModuleProvider="target">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gwk-HN-GE3" customClass="CustomActivityIndicatorView" customModule="Chally" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
                             </activityIndicatorView>
                         </subviews>
@@ -1017,7 +1017,7 @@
         <!--Group Channel Chat View Controller-->
         <scene sceneID="ipV-Fx-eSg">
             <objects>
-                <viewController storyboardIdentifier="GrouplChatViewController" id="ESq-tY-gjT" customClass="GroupChannelChatViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GrouplChatViewController" id="ESq-tY-gjT" customClass="GroupChannelChatViewController" customModule="Chally" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="CQq-dl-bWx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1176,7 +1176,7 @@
                                     <constraint firstItem="zSS-G6-YAw" firstAttribute="top" secondItem="QuK-mS-w71" secondAttribute="top" id="w1O-Ni-sHs"/>
                                 </constraints>
                             </view>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="x4w-rc-Oaf" customClass="CustomActivityIndicatorView" customModule="SendBird_iOS" customModuleProvider="target">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="x4w-rc-Oaf" customClass="CustomActivityIndicatorView" customModule="Chally" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </activityIndicatorView>
                             <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0az-YP-nSf" userLabel="Toast View">
@@ -1260,7 +1260,7 @@
         <!--Create Group Channel Navigation Controller-->
         <scene sceneID="N3H-6T-86S">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="efp-2W-Ywn" customClass="CreateGroupChannelNavigationController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="efp-2W-Ywn" customClass="CreateGroupChannelNavigationController" customModule="Chally" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Sbo-AA-peK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
@@ -1296,7 +1296,7 @@
         <!--Chally Group View Controller-->
         <scene sceneID="W4Z-UY-iDs">
             <objects>
-                <viewController id="uLs-jd-uTQ" customClass="ChallyGroupViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uLs-jd-uTQ" customClass="ChallyGroupViewController" customModule="Chally" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fyy-Ig-Say">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1369,7 +1369,7 @@
         <!--Single Challenge-->
         <scene sceneID="BBe-ea-n7c">
             <objects>
-                <viewController title="Single Challenge" id="m6i-c3-q4d" customClass="SingleChallengeViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Single Challenge" id="m6i-c3-q4d" customClass="SingleChallengeViewController" customModule="Chally" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qe4-uc-Q05">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1378,7 +1378,7 @@
                                 <rect key="frame" x="0.0" y="216" width="375" height="451"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SinglePostCell" rowHeight="361" id="8WV-Ez-r72" customClass="SinglePostCell" customModule="SendBird_iOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SinglePostCell" rowHeight="361" id="8WV-Ez-r72" customClass="SinglePostCell" customModule="Chally" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="361"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8WV-Ez-r72" id="UlN-CS-Xum">
@@ -1426,7 +1426,7 @@
                                             <outlet property="usernameLabel" destination="ndn-Yu-IXE" id="YeS-bc-Q6F"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SingleCommentCell" id="P8s-j7-OTh" customClass="SingleCommentCell" customModule="SendBird_iOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SingleCommentCell" id="P8s-j7-OTh" customClass="SingleCommentCell" customModule="Chally" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="389" width="375" height="36.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="P8s-j7-OTh" id="Up3-BC-xmo">
@@ -1538,7 +1538,7 @@
         <!--Single Post-->
         <scene sceneID="yaF-7q-iel">
             <objects>
-                <viewController title="Single Post" id="Xxu-Mm-5MQ" customClass="SinglePostViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Single Post" id="Xxu-Mm-5MQ" customClass="SinglePostViewController" customModule="Chally" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kn7-ky-CAJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
