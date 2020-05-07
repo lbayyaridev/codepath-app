@@ -10,9 +10,9 @@
 		6633B087CBBFF5D127950576 /* Pods_Chally_ChallyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BEF2DE5BD786BF245FB6448 /* Pods_Chally_ChallyUITests.framework */; };
 		BB451F942453E65100DC5793 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB451F932453E65100DC5793 /* ProfileViewController.swift */; };
 		C42C8F4284741FE6E424D85A /* Pods_Chally.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3351EE904E6B1CAC59F0F74 /* Pods_Chally.framework */; };
-		D727018E245E201C006C2A48 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D727018D245E201C006C2A48 /* ProfileViewController.swift */; };
 		D74E10982442AC90000380ED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74E10972442AC90000380ED /* LoginViewController.swift */; };
 		D74E5FFA245D318100D04212 /* ProfilePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74E5FF9245D318100D04212 /* ProfilePicViewController.swift */; };
+		D75E598E2463CAE600EC1EF7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E598D2463CAE500EC1EF7 /* ProfileViewController.swift */; };
 		D76363EA2452A70700D0EE9E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76363E92452A70700D0EE9E /* CameraViewController.swift */; };
 		D76363EE2453814300D0EE9E /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76363ED2453814300D0EE9E /* PostCell.swift */; };
 		D76363F02453816700D0EE9E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76363EF2453816700D0EE9E /* FeedViewController.swift */; };
@@ -53,9 +53,9 @@
 		B114052C8C1A69DAFC0D2BA7 /* Pods-Chally.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chally.debug.xcconfig"; path = "Target Support Files/Pods-Chally/Pods-Chally.debug.xcconfig"; sourceTree = "<group>"; };
 		BB451F932453E65100DC5793 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D4AD054866B05CB1CA113CFE /* Pods-Chally.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chally.release.xcconfig"; path = "Target Support Files/Pods-Chally/Pods-Chally.release.xcconfig"; sourceTree = "<group>"; };
-		D727018D245E201C006C2A48 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = SOURCE_ROOT; };
 		D74E10972442AC90000380ED /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D74E5FF9245D318100D04212 /* ProfilePicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePicViewController.swift; sourceTree = "<group>"; };
+		D75E598D2463CAE500EC1EF7 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D76363E92452A70700D0EE9E /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		D76363ED2453814300D0EE9E /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		D76363EF2453816700D0EE9E /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -160,8 +160,8 @@
 				D7A1BE00244257C4006AAFC4 /* Info.plist */,
 				D74E10972442AC90000380ED /* LoginViewController.swift */,
 				D76363E92452A70700D0EE9E /* CameraViewController.swift */,
-				D727018D245E201C006C2A48 /* ProfileViewController.swift */,
 				D76363ED2453814300D0EE9E /* PostCell.swift */,
+				D75E598D2463CAE500EC1EF7 /* ProfileViewController.swift */,
 				D74E5FF9245D318100D04212 /* ProfilePicViewController.swift */,
 				D76363EF2453816700D0EE9E /* FeedViewController.swift */,
 				D76363F124538E2D00D0EE9E /* CommentCell.swift */,
@@ -438,7 +438,7 @@
 			files = (
 				BB451F942453E65100DC5793 /* ProfileViewController.swift in Sources */,
 				D74E10982442AC90000380ED /* LoginViewController.swift in Sources */,
-				D727018E245E201C006C2A48 /* ProfileViewController.swift in Sources */,
+				D75E598E2463CAE600EC1EF7 /* ProfileViewController.swift in Sources */,
 				D74E5FFA245D318100D04212 /* ProfilePicViewController.swift in Sources */,
 				D76363EA2452A70700D0EE9E /* CameraViewController.swift in Sources */,
 				D7A1BDF3244257BC006AAFC4 /* AppDelegate.swift in Sources */,
