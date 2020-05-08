@@ -359,7 +359,7 @@
         <!--Profile-->
         <scene sceneID="bBt-cJ-4Qj">
             <objects>
-                <viewController id="CDy-Mb-51I" sceneMemberID="viewController">
+                <viewController id="CDy-Mb-51I" customClass="ProfileViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NqJ-7F-yMs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -444,15 +444,20 @@
                         <viewLayoutGuide key="safeArea" id="4W0-1i-bHx"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="tyi-B7-MhR"/>
+                    <connections>
+                        <outlet property="profileBio" destination="dbj-iH-8I2" id="MS4-kY-yMp"/>
+                        <outlet property="profileImage" destination="M6b-IG-aIJ" id="UqA-7m-15N"/>
+                        <outlet property="profileName" destination="o8Y-TG-XrU" id="eqZ-J7-jhu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gnd-tz-Pew" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1302" y="1286"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Edit Profile View Controller-->
         <scene sceneID="OIz-El-vlS">
             <objects>
-                <viewController id="3SI-CT-4EL" customClass="ProfileViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3SI-CT-4EL" customClass="EditProfileViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gRk-2f-clu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -501,7 +506,7 @@
                                 <rect key="frame" x="149" y="350" width="165" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V2X-Ax-2Dg">
                                 <rect key="frame" x="149" y="392" width="165" height="34"/>
@@ -522,9 +527,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="1k6-n1-XHR" appends="YES" id="h9w-Mk-eIE"/>
-                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLG-Wq-5oD">
                                 <rect key="frame" x="100" y="480" width="175" height="40"/>
@@ -543,9 +545,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="v79-kU-6jx"/>
                     <connections>
-                        <outlet property="bioField" destination="V2X-Ax-2Dg" id="jBr-7e-Svz"/>
-                        <outlet property="imageView" destination="0xB-To-H95" id="sXv-4o-2Gs"/>
-                        <outlet property="profileNameField" destination="SNW-lq-nXF" id="F9P-7h-kK6"/>
+                        <outlet property="bioField" destination="V2X-Ax-2Dg" id="9i8-c7-aGd"/>
+                        <outlet property="imageView" destination="0xB-To-H95" id="x6a-mS-xjf"/>
+                        <outlet property="passwordField" destination="Vdt-Hv-gHS" id="8iX-Qc-FQz"/>
+                        <outlet property="profileNamefield" destination="SNW-lq-nXF" id="rLL-Pt-j4H"/>
+                        <outlet property="usernameField" destination="DUy-aI-HwI" id="vmE-5E-JbW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BK6-Lx-GmB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -621,7 +625,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Iih-Hl-hua"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Challenge" image="hand.thumbsup.fill" id="23Z-eC-vrs"/>
+                    <tabBarItem key="tabBarItem" title="Challenge" image="hand.thumbsup.fill" selectedImage="challenges" id="23Z-eC-vrs"/>
                     <connections>
                         <outlet property="commentField" destination="RrB-3q-OEd" id="itP-su-zKH"/>
                         <outlet property="imageView" destination="1KC-yU-SHs" id="W8Z-x0-BZ8"/>
@@ -786,6 +790,7 @@
     </scenes>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="96"/>
+        <image name="challenges" width="512" height="512"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="hand.thumbsup.fill" width="128" height="124"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>

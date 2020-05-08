@@ -12,12 +12,11 @@ import AlamofireImage
 
 class EditProfileViewController:UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
 
-    
     @IBOutlet weak var imageView: UIImageView!
+    
     @IBOutlet weak var bioField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var usernameField: UITextField!
-    
     @IBOutlet weak var profileNamefield: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
