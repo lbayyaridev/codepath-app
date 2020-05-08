@@ -123,14 +123,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="14D-iy-86r" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="strong" translatesAutoresizingMaskIntoConstraints="NO" id="sfd-2v-UDd" userLabel="SendBird Logo Image View">
-                                                <rect key="frame" x="156.5" y="100" width="62" height="62"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="62" id="X4T-4S-sg6"/>
-                                                    <constraint firstAttribute="width" constant="62" id="k40-vL-Dfb"/>
-                                                </constraints>
-                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fd-HH-BQ0" userLabel="User ID Label">
                                                 <rect key="frame" x="30" y="218" width="315" height="16"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
@@ -241,6 +233,14 @@
                                                     <action selector="didTapSignUp:" destination="S9L-1m-OVn" eventType="touchUpInside" id="jfC-ek-0wh"/>
                                                 </connections>
                                             </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="strong" translatesAutoresizingMaskIntoConstraints="NO" id="sfd-2v-UDd" userLabel="SendBird Logo Image View">
+                                                <rect key="frame" x="137" y="73" width="100" height="100"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="62" id="X4T-4S-sg6"/>
+                                                    <constraint firstAttribute="width" constant="62" id="k40-vL-Dfb"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -367,7 +367,7 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K3x-Fi-Yb9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" red="1" green="0.49441277010000001" blue="0.41002188919999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="barTintColor" red="1" green="0.0" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="Profile" id="l4Y-On-cgz">
                                         <barButtonItem key="rightBarButtonItem" title="Settings" image="gear" catalog="system" style="plain" id="XkE-1x-09s">
@@ -429,7 +429,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Challies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQk-k0-3ee">
                                 <rect key="frame" x="0.0" y="267" width="375" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.49441277010000001" blue="0.41002188919999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -452,7 +452,7 @@
         <!--Profile View Controller-->
         <scene sceneID="OIz-El-vlS">
             <objects>
-                <viewController id="3SI-CT-4EL" customClass="ProfileViewController" customModule="Chally" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3SI-CT-4EL" customClass="ProfileViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gRk-2f-clu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -512,28 +512,31 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A6G-YG-hJ1">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" red="1" green="0.49441277010000001" blue="0.41002188919999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="barTintColor" red="1" green="0.0" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="Edit Profile" id="ftF-TT-NEU"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLG-Wq-5oD">
-                                <rect key="frame" x="140" y="459" width="96" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save changes"/>
-                                <connections>
-                                    <action selector="onSaveButton:" destination="3SI-CT-4EL" eventType="touchUpInside" id="3S2-St-vih"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0xB-To-H95">
                                 <rect key="frame" x="104" y="73" width="169" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="1" green="0.53825885060000001" blue="0.4631426334" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="1k6-n1-XHR" appends="YES" id="h9w-Mk-eIE"/>
                                 </connections>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLG-Wq-5oD">
+                                <rect key="frame" x="100" y="480" width="175" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Save changes">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSaveButton:" destination="3SI-CT-4EL" eventType="touchUpInside" id="3S2-St-vih"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="qnK-I0-g96"/>
@@ -557,7 +560,7 @@
         <!--Challenge-->
         <scene sceneID="y7w-GY-tnk">
             <objects>
-                <viewController id="XbB-oF-V3G" customClass="CameraViewController" customModule="Chally" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XbB-oF-V3G" customClass="CameraViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rz9-PT-U6v">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -565,21 +568,16 @@
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1KC-yU-SHs">
                                 <rect key="frame" x="80" y="142" width="214" height="205"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="M7f-z6-JOY" appends="YES" id="Qxd-B3-eMI"/>
                                 </connections>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9af-Xd-jIu">
-                                <rect key="frame" x="129" y="455" width="117" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Edit Participation"/>
-                            </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j1h-1f-nxb">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" red="1" green="0.49441277010000001" blue="0.41002188919999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="barTintColor" red="1" green="0.0" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="Add Post" id="YrV-Sz-QGr"/>
                                 </items>
@@ -590,25 +588,40 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <searchBar contentMode="redraw" fixedFrame="YES" prompt="Type a challenge" placeholder="Search for a challenge" showsSearchResultsButton="YES" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cZJ-QG-rD4">
-                                <rect key="frame" x="0.0" y="44" width="375" height="90"/>
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search for a challenge" showsSearchResultsButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cZJ-QG-rD4">
+                                <rect key="frame" x="0.0" y="78" width="375" height="56"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="10" vertical="10"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2S-1Z-b5l">
                                 <rect key="frame" x="105" y="410" width="165" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Submit"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="onSubmitButton:" destination="XbB-oF-V3G" eventType="touchUpInside" id="WdR-gL-KEo"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9af-Xd-jIu">
+                                <rect key="frame" x="105" y="470" width="165" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Edit Participation">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Iih-Hl-hua"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Challenge" image="hand.thumbsup.fill" catalog="system" id="23Z-eC-vrs"/>
+                    <tabBarItem key="tabBarItem" title="Challenge" image="hand.thumbsup.fill" id="23Z-eC-vrs"/>
                     <connections>
                         <outlet property="commentField" destination="RrB-3q-OEd" id="itP-su-zKH"/>
                         <outlet property="imageView" destination="1KC-yU-SHs" id="W8Z-x0-BZ8"/>
@@ -622,12 +635,12 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="526" y="1286"/>
+            <point key="canvasLocation" x="525.60000000000002" y="1285.9070464767617"/>
         </scene>
         <!--FeedViewController-->
         <scene sceneID="wJk-YT-u36">
             <objects>
-                <viewController title="FeedViewController" id="BXw-gv-j4D" customClass="FeedViewController" customModule="Chally" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="FeedViewController" id="BXw-gv-j4D" customClass="FeedViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mNS-4D-phY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -635,7 +648,7 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SxI-4m-m3F">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" red="1" green="0.49441277010000001" blue="0.41002188919999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="barTintColor" red="1" green="0.0" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="Chally" id="fC4-iq-A5b">
                                         <barButtonItem key="leftBarButtonItem" title="Logout" id="6Cd-Ca-FA0">
@@ -652,7 +665,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="384" id="8Vn-md-oQa" customClass="PostCell" customModule="Chally" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="384" id="8Vn-md-oQa" customClass="PostCell" customModule="SendBird_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="384"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8Vn-md-oQa" id="zTm-mO-Z5s">
@@ -694,7 +707,7 @@
                                             <outlet property="usernameLabel" destination="qGF-hf-MKn" id="5fD-7g-QCJ"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" rowHeight="50" id="6ol-pi-fcN" customClass="CommentCell" customModule="Chally" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" rowHeight="50" id="6ol-pi-fcN" customClass="CommentCell" customModule="SendBird_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="412" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6ol-pi-fcN" id="cmJ-Mw-n9r">
@@ -774,7 +787,7 @@
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="96"/>
         <image name="gear" catalog="system" width="128" height="119"/>
-        <image name="hand.thumbsup.fill" catalog="system" width="128" height="124"/>
+        <image name="hand.thumbsup.fill" width="128" height="124"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="img_tab_group_channel_normal" width="28" height="28"/>
         <image name="img_tab_group_channel_selected" width="28" height="28"/>

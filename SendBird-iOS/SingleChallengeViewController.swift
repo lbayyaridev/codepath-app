@@ -61,8 +61,13 @@ class SingleChallengeViewController: UIViewController, UITableViewDelegate, UITa
         } catch {
             print(error)
         }
+
+        
     }
     
+@objc func doubleTapped() {
+    // do something here
+}
     @objc func keyBoardWillBeHidden(note: Notification) {
         commentBar.inputTextView.text = nil
         showsCommentBar = false
@@ -159,6 +164,7 @@ class SingleChallengeViewController: UIViewController, UITableViewDelegate, UITa
             cell.photoView.sd_setImage(with: url, completed: nil)
             
             return cell
+            
         } else if indexPath.row <= comments.count {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SingleCommentCell") as! SingleCommentCell
             
@@ -167,12 +173,15 @@ class SingleChallengeViewController: UIViewController, UITableViewDelegate, UITa
             
             let user = comment["author"] as! PFUser
             cell.nameLabel.text = user.username
+
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell")!
             return cell
         }
     }
+    
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let post = posts[indexPath.section]
@@ -187,6 +196,8 @@ class SingleChallengeViewController: UIViewController, UITableViewDelegate, UITa
         }
         
     }
+    
+ 
     
 
     

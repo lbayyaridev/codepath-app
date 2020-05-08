@@ -37,7 +37,6 @@
 		D75E59862463BE1C00EC1EF7 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E59802463BE1A00EC1EF7 /* CameraViewController.swift */; };
 		D75E59872463BE1C00EC1EF7 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E59812463BE1B00EC1EF7 /* FeedViewController.swift */; };
 		D75E59882463BE1C00EC1EF7 /* ProfilePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E59822463BE1C00EC1EF7 /* ProfilePicViewController.swift */; };
-		D75E598C2463BE7900EC1EF7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E598B2463BE7900EC1EF7 /* ProfileViewController.swift */; };
 		E21C53E52195DB7900782B60 /* GroupChannelSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21C53E32195DB7900782B60 /* GroupChannelSettingsViewController.swift */; };
 		E21CDFC52165619000839683 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21CDFC42165619000839683 /* AppDelegate.swift */; };
 		E21CDFC72165619000839683 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21CDFC62165619000839683 /* ViewController.swift */; };
@@ -143,7 +142,6 @@
 		D75E59802463BE1A00EC1EF7 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = Images/CameraViewController.swift; sourceTree = "<group>"; };
 		D75E59812463BE1B00EC1EF7 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedViewController.swift; path = Images/FeedViewController.swift; sourceTree = "<group>"; };
 		D75E59822463BE1C00EC1EF7 /* ProfilePicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfilePicViewController.swift; path = Images/ProfilePicViewController.swift; sourceTree = "<group>"; };
-		D75E598B2463BE7900EC1EF7 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = "../../Chally/codepath-app/Chally/ProfileViewController.swift"; sourceTree = "<group>"; };
 		E21C53E32195DB7900782B60 /* GroupChannelSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChannelSettingsViewController.swift; sourceTree = "<group>"; };
 		E21CDFC12165619000839683 /* SendBird-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SendBird-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E21CDFC42165619000839683 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -316,7 +314,6 @@
 				E21CDFC42165619000839683 /* AppDelegate.swift */,
 				A92B79E5230F964A008C522A /* SceneDelegate.swift */,
 				E21CDFC62165619000839683 /* ViewController.swift */,
-				D75E598B2463BE7900EC1EF7 /* ProfileViewController.swift */,
 				E21CDFC82165619000839683 /* Main.storyboard */,
 				520FF86B22E686A900A9D7F4 /* Settings.storyboard */,
 				A9FBF70D22FCFB10000E146B /* SplitViewController.swift */,
@@ -706,7 +703,6 @@
 				E27E3FB4217E83D10082C91C /* DownloadManager.swift in Sources */,
 				9EB3EAE4245D350E004702F0 /* ItemCell.swift in Sources */,
 				9E492BF5246139EB00B94A54 /* SingleCommentCell.swift in Sources */,
-				D75E598C2463BE7900EC1EF7 /* ProfileViewController.swift in Sources */,
 				A94CC22823669E7500608E27 /* ConnectionManager.swift in Sources */,
 				9E4176D9245D03B0008EF6BC /* ChallyGroupViewController.swift in Sources */,
 				E298FFE5219F1FCC009F83D0 /* GroupChannelSettingsChannelCoverNameTableViewCell.swift in Sources */,
