@@ -65,9 +65,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="DrR-bG-R9w" kind="relationship" relationship="viewControllers" id="KYU-LP-03N"/>
-                        <segue destination="eBT-Hb-cvV" kind="relationship" relationship="viewControllers" id="0Bs-W5-W13"/>
                         <segue destination="CDy-Mb-51I" kind="relationship" relationship="viewControllers" id="J8y-Nj-330"/>
                         <segue destination="BXw-gv-j4D" kind="relationship" relationship="viewControllers" id="FSh-7R-yNt"/>
+                        <segue destination="UPs-Xw-oXl" kind="relationship" relationship="viewControllers" id="5Lg-g3-ou8"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bf4-qX-kle" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -362,7 +362,7 @@
             <objects>
                 <viewController id="CDy-Mb-51I" customClass="ProfileViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NqJ-7F-yMs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K3x-Fi-Yb9">
@@ -460,7 +460,7 @@
             <objects>
                 <viewController id="3SI-CT-4EL" customClass="EditProfileViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gRk-2f-clu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qi-m0-ZWQ">
@@ -566,11 +566,84 @@
             <point key="canvasLocation" x="1302" y="2006"/>
         </scene>
         <!--Challenge-->
+        <scene sceneID="DwS-Fg-1Tr">
+            <objects>
+                <viewController id="UPs-Xw-oXl" customClass="AddChallengeViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SCC-mZ-JP9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ez6-qG-zc5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" name="color_bar_item"/>
+                                <items>
+                                    <navigationItem title="Challenge" id="hri-BE-KpV"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add a new Challenge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeU-os-zQG">
+                                <rect key="frame" x="107" y="207" width="161" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01a-47-Iak">
+                                <rect key="frame" x="178" y="303" width="19" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Challenge Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J99-eH-fQY">
+                                <rect key="frame" x="88" y="249" width="133" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZe-eg-pdM">
+                                <rect key="frame" x="240" y="251" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="onSubmitButton:" destination="UPs-Xw-oXl" eventType="touchUpInside" id="aRt-yb-TlV"/>
+                                    <segue destination="XbB-oF-V3G" kind="popoverPresentation" popoverAnchorView="nZe-eg-pdM" id="e4e-lo-HLE">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8C-mz-Ra3">
+                                <rect key="frame" x="88" y="332" width="199" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="color_group_channel_unread_count_bg"/>
+                                <state key="normal" title="Post to an Existing Challenge">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" name="color_bar_item"/>
+                                </state>
+                                <connections>
+                                    <segue destination="eBT-Hb-cvV" kind="show" id="l1f-6e-qWP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Bfy-kX-PZw"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Challenge" image="camera.fill" catalog="system" selectedImage="camera.fill" id="QST-hU-xkh"/>
+                    <navigationItem key="navigationItem" id="qoh-kF-i7j"/>
+                    <connections>
+                        <outlet property="challengeNameField" destination="J99-eH-fQY" id="G0n-HV-R3i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GZk-fa-Rl0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="509.60000000000002" y="1285.9070464767617"/>
+        </scene>
+        <!--Challenge-->
         <scene sceneID="cx7-p5-Cgu">
             <objects>
                 <viewController id="eBT-Hb-cvV" customClass="SearchChallengeViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J2p-fu-IsX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KP3-ry-KHq">
@@ -632,6 +705,7 @@
                     <tabBarItem key="tabBarItem" title="Challenge" image="camera" catalog="system" selectedImage="camera.fill" id="u0l-yF-SoY">
                         <color key="badgeColor" name="color_group_channel_unread_count_bg"/>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" id="7U1-mD-MHg"/>
                     <connections>
                         <outlet property="searchBar" destination="cLL-IA-TZ3" id="YzX-Ea-K23"/>
                         <outlet property="tableView" destination="6eE-8b-Zpr" id="DoS-gN-Nga"/>
@@ -639,14 +713,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FgK-Jc-EDd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="533.60000000000002" y="1285.9070464767617"/>
+            <point key="canvasLocation" x="510" y="2006"/>
         </scene>
         <!--Challenge-->
         <scene sceneID="y7w-GY-tnk">
             <objects>
                 <viewController id="XbB-oF-V3G" customClass="CameraViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rz9-PT-U6v">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1KC-yU-SHs">
@@ -720,7 +794,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="533.60000000000002" y="2005.5472263868066"/>
+            <point key="canvasLocation" x="510" y="2691"/>
         </scene>
         <!--FeedViewController-->
         <scene sceneID="wJk-YT-u36">
@@ -871,6 +945,9 @@
             <point key="canvasLocation" x="889" y="-215"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="e4e-lo-HLE"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="96"/>
         <image name="camera.fill" catalog="system" width="128" height="96"/>
