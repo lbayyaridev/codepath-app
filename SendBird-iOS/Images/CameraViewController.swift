@@ -14,9 +14,9 @@ import SendBirdSDK
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    
-    @IBOutlet weak var searchBar: UISearchBar!
-    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var challengeLabel: UILabel!
+    var challenge = ""
     @IBOutlet weak var commentField: UITextField!
     @IBAction func onCameraButton(_ sender: Any) {
         let picker = UIImagePickerController()
@@ -43,11 +43,12 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         post["caption"] = commentField.text!
         post["author"] = PFUser.current()!
-        
+        post["challenge"] = challenge
         let imageData = imageView.image!.pngData()
         let file = PFFileObject(data: imageData!)
         post["image"] = file
         post["local"] = false
+        post["groupid"] = nil
         post.saveInBackground{ (success, error) in
             if success{
                 self.dismiss(animated: true, completion: nil)
@@ -59,10 +60,10 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
         
     }
-    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        challengeLabel.text = challenge
+        
         // Do any additional setup after loading the view.
     }
     

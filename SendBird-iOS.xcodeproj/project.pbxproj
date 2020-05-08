@@ -38,6 +38,7 @@
 		D75E59872463BE1C00EC1EF7 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E59812463BE1B00EC1EF7 /* FeedViewController.swift */; };
 		D75E599A24652ED800EC1EF7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E599924652ED800EC1EF7 /* ProfileViewController.swift */; };
 		D75E599C24652EE200EC1EF7 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E599B24652EE200EC1EF7 /* EditProfileViewController.swift */; };
+		D75E599E2465396700EC1EF7 /* SearchChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E599D2465396700EC1EF7 /* SearchChallengeViewController.swift */; };
 		E21C53E52195DB7900782B60 /* GroupChannelSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21C53E32195DB7900782B60 /* GroupChannelSettingsViewController.swift */; };
 		E21CDFC52165619000839683 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21CDFC42165619000839683 /* AppDelegate.swift */; };
 		E21CDFC72165619000839683 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21CDFC62165619000839683 /* ViewController.swift */; };
@@ -144,6 +145,7 @@
 		D75E59812463BE1B00EC1EF7 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedViewController.swift; path = Images/FeedViewController.swift; sourceTree = "<group>"; };
 		D75E599924652ED800EC1EF7 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D75E599B24652EE200EC1EF7 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		D75E599D2465396700EC1EF7 /* SearchChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchChallengeViewController.swift; sourceTree = "<group>"; };
 		E21C53E32195DB7900782B60 /* GroupChannelSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChannelSettingsViewController.swift; sourceTree = "<group>"; };
 		E21CDFC12165619000839683 /* SendBird-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SendBird-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E21CDFC42165619000839683 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -316,6 +318,8 @@
 				A92B79E5230F964A008C522A /* SceneDelegate.swift */,
 				E21CDFC62165619000839683 /* ViewController.swift */,
 				E21CDFC82165619000839683 /* Main.storyboard */,
+				D75E599D2465396700EC1EF7 /* SearchChallengeViewController.swift */,
+				9E721354245D44750066DEA8 /* ChallengesViewController.swift */,
 				D75E599B24652EE200EC1EF7 /* EditProfileViewController.swift */,
 				520FF86B22E686A900A9D7F4 /* Settings.storyboard */,
 				A9FBF70D22FCFB10000E146B /* SplitViewController.swift */,
@@ -327,7 +331,6 @@
 				E21CDFCD2165619100839683 /* LaunchScreen.storyboard */,
 				E21CDFD02165619100839683 /* Info.plist */,
 				E27E3ED5217123160082C91C /* MainTabBarController.swift */,
-				9E721354245D44750066DEA8 /* ChallengesViewController.swift */,
 				9E492BEC24612A8600B94A54 /* SingleChallengeViewController.swift */,
 				9E492BF2246139D100B94A54 /* SinglePostCell.swift */,
 				9E492BF4246139EB00B94A54 /* SingleCommentCell.swift */,
@@ -768,6 +771,7 @@
 				E2D0C15121935A580080A5F3 /* GroupChannelIncomingAudioFileMessageTableViewCell.swift in Sources */,
 				E2D0C13721924A0D0080A5F3 /* GroupChannelIncomingGeneralFileMessageTableViewCell.swift in Sources */,
 				E27E3F822177BACB0082C91C /* BlockedUserTableViewCell.swift in Sources */,
+				D75E599E2465396700EC1EF7 /* SearchChallengeViewController.swift in Sources */,
 				E2D0C12F219249E70080A5F3 /* GroupChannelIncomingUserMessageTableViewCell.swift in Sources */,
 				E27E3ECE21711AD10082C91C /* Utils.swift in Sources */,
 				E27E3F682177B5770082C91C /* SettingsSwitchTableViewCell.swift in Sources */,
@@ -930,13 +934,13 @@
 				CODE_SIGN_ENTITLEMENTS = "SendBird-iOS/SendBird-iOS.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5Z2QU5939G;
+				DEVELOPMENT_TEAM = RZ4H8B3D58;
 				INFOPLIST_FILE = "SendBird-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = .com.chally.1234;
+				PRODUCT_BUNDLE_IDENTIFIER = .com.chally;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = SIMULATOR;
@@ -953,13 +957,13 @@
 				CODE_SIGN_ENTITLEMENTS = "SendBird-iOS/SendBird-iOS.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5Z2QU5939G;
+				DEVELOPMENT_TEAM = RZ4H8B3D58;
 				INFOPLIST_FILE = "SendBird-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = .com.chally.1234;
+				PRODUCT_BUNDLE_IDENTIFIER = .com.chally;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
