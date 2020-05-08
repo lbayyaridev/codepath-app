@@ -84,7 +84,7 @@ class ChallengesViewController: UIViewController, UICollectionViewDelegate, UICo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! ItemCell
         cell.setData(text: self.dataArray[indexPath.row])
-        cell.setImage(pic: self.picArray[indexPath.row])
+        //cell.setImage(pic: self.picArray[indexPath.row])
         
         cell.contentView.layer.cornerRadius = 10
         cell.contentView.layer.borderWidth = 1.0

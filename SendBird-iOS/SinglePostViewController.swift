@@ -57,6 +57,7 @@ class SinglePostViewController: UIViewController, UIImagePickerControllerDelegat
         post["groupid"] = groupID?.channelUrl
         post["challenge"] = challengeName
         post["original"] = false
+        post["likes"] = "0"
         
         // Need to create a error if trying to add existing challenge
         
