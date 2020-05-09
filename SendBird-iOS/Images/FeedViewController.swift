@@ -13,6 +13,8 @@ import MessageInputBar
 import SDWebImage
 import QuartzCore
 
+
+@available(iOS 13.0, *)
 class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MessageInputBarDelegate {
 
     @IBOutlet weak var tableView: UITableView!
@@ -55,9 +57,10 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let query = PFQuery(className: "Posts")
+        query.whereKey("original", equalTo: false)
         query.includeKeys(["author","comments","comments.author"])
         query.limit = 20
-        
+        query.whereKey("original", equalTo: false)
         query.findObjectsInBackground{
             (posts, error) in
             if posts != nil{
@@ -118,6 +121,12 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             cell.numLikes.text = post["likes"] as! String
             cell.postID = (post.objectId ?? "")
             
+            var userWhoLiked = post["userWhoLiked"] as! [String]
+            if userWhoLiked.contains((PFUser.current()?.objectId)!) {
+                cell.smallLike.setImage(UIImage(named: "oneLike"), for: .normal)
+                
+            }
+            
             return cell
         }else if indexPath.row <= comments.count{
             print("HERE")
@@ -137,13 +146,13 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @IBAction func onLogoutButton(_ sender: Any) {
-        /* PFUser.logOut()
-               
-               let main = UIStoryboard(name: "Main", bundle: nil)
+        PFUser.logOut()
+        ConnectionManager.logout{}
+        let main = UIStoryboard(name: "Main", bundle: nil)
         let loginViewController = main.instantiateViewController(withIdentifier: "LoginViewController")
                let sceneDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
                sceneDelegate.window?.rootViewController = loginViewController
- */
+ 
     }
     
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
