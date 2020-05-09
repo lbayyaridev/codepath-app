@@ -55,6 +55,7 @@ class ChallyGroupViewController: UIViewController, UIImagePickerControllerDelega
         post["challenge"] = challengeName
         post["original"] = true
         post["local"] = true
+        post["likes"] = ""
         
         // Need to create a error if trying to add existing challenge
         

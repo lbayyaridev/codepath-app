@@ -23,6 +23,8 @@
 		9E492BED24612A8600B94A54 /* SingleChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E492BEC24612A8600B94A54 /* SingleChallengeViewController.swift */; };
 		9E492BF3246139D100B94A54 /* SinglePostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E492BF2246139D100B94A54 /* SinglePostCell.swift */; };
 		9E492BF5246139EB00B94A54 /* SingleCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E492BF4246139EB00B94A54 /* SingleCommentCell.swift */; };
+		9E6A443E24652DBF00D2998F /* LikeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6A443D24652DBF00D2998F /* LikeAnimator.swift */; };
+		9E6A4440246542C600D2998F /* WhatChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6A443F246542C600D2998F /* WhatChallengeViewController.swift */; };
 		9E721355245D44750066DEA8 /* ChallengesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E721354245D44750066DEA8 /* ChallengesViewController.swift */; };
 		9EB3EAE4245D350E004702F0 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3EAE2245D350E004702F0 /* ItemCell.swift */; };
 		9EB3EAE5245D350E004702F0 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EB3EAE3245D350E004702F0 /* ItemCell.xib */; };
@@ -131,6 +133,8 @@
 		9E492BEC24612A8600B94A54 /* SingleChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleChallengeViewController.swift; sourceTree = "<group>"; };
 		9E492BF2246139D100B94A54 /* SinglePostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePostCell.swift; sourceTree = "<group>"; };
 		9E492BF4246139EB00B94A54 /* SingleCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCommentCell.swift; sourceTree = "<group>"; };
+		9E6A443D24652DBF00D2998F /* LikeAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeAnimator.swift; sourceTree = "<group>"; };
+		9E6A443F246542C600D2998F /* WhatChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatChallengeViewController.swift; sourceTree = "<group>"; };
 		9E721354245D44750066DEA8 /* ChallengesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesViewController.swift; sourceTree = "<group>"; };
 		9EB3EAE2245D350E004702F0 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		9EB3EAE3245D350E004702F0 /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
@@ -327,6 +331,7 @@
 				520FF86B22E686A900A9D7F4 /* Settings.storyboard */,
 				A9FBF70D22FCFB10000E146B /* SplitViewController.swift */,
 				520FF86722E6869100A9D7F4 /* GroupChannel.storyboard */,
+				9E6A443F246542C600D2998F /* WhatChallengeViewController.swift */,
 				D75E596924638A0E00EC1EF7 /* SinglePostViewController.swift */,
 				9E4176D8245D03B0008EF6BC /* ChallyGroupViewController.swift */,
 				D75E599924652ED800EC1EF7 /* ProfileViewController.swift */,
@@ -336,6 +341,7 @@
 				E27E3ED5217123160082C91C /* MainTabBarController.swift */,
 				9E492BEC24612A8600B94A54 /* SingleChallengeViewController.swift */,
 				9E492BF2246139D100B94A54 /* SinglePostCell.swift */,
+				9E6A443D24652DBF00D2998F /* LikeAnimator.swift */,
 				9E492BF4246139EB00B94A54 /* SingleCommentCell.swift */,
 			);
 			path = "SendBird-iOS";
@@ -730,6 +736,7 @@
 				E2D0C10A218D0B680080A5F3 /* GroupChannelSettingsDelegate.swift in Sources */,
 				E2D0C14121924A4B0080A5F3 /* GroupChannelOutgoingImageVideoFileMessageTableViewCell.swift in Sources */,
 				E2980010219F509F009F83D0 /* GroupChannelCoverImageNameSettingDelegate.swift in Sources */,
+				9E6A4440246542C600D2998F /* WhatChallengeViewController.swift in Sources */,
 				D75E59872463BE1C00EC1EF7 /* FeedViewController.swift in Sources */,
 				5215677D22E92D3B00C12632 /* GroupChannelMessageTableViewCell.swift in Sources */,
 				E27E3F08217532F50082C91C /* CreateGroupChannelViewControllerB.swift in Sources */,
@@ -787,6 +794,7 @@
 				E21C53E52195DB7900782B60 /* GroupChannelSettingsViewController.swift in Sources */,
 				E27E3EE9217156A60082C91C /* GroupChannelsViewController.swift in Sources */,
 				5215271722E0078500F2F011 /* SettingsTimeViewController.swift in Sources */,
+				9E6A443E24652DBF00D2998F /* LikeAnimator.swift in Sources */,
 				E27E3F862177BB7C0082C91C /* SettingsTimePickerTableViewCell.swift in Sources */,
 				A9FBF70E22FCFB10000E146B /* SplitViewController.swift in Sources */,
 			);

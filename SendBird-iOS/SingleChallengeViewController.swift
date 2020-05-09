@@ -12,6 +12,7 @@ import AlamofireImage
 import MessageInputBar
 import SendBirdSDK
 import SDWebImage
+import QuartzCore
 
 class SingleChallengeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MessageInputBarDelegate {
 
@@ -46,28 +47,27 @@ class SingleChallengeViewController: UIViewController, UITableViewDelegate, UITa
         
         let center = NotificationCenter.default
         center.addObserver(self, selector: #selector(keyBoardWillBeHidden(note:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
         whatChallenge.text = challengeName
-        let query = PFQuery(className:"Posts")
-        query.whereKey("groupid", equalTo: groupID!.channelUrl)
-        query.whereKey("original", equalTo: true)
-        do {
-            let objects = try query.findObjects()
-            for object in objects {
-                let imageFile = object["image"] as! PFFileObject
-                let urlString = imageFile.url!
-                let url = URL(string: urlString)!
-                challengePic.sd_setImage(with: url, completed: nil)
-            }
-        } catch {
-            print(error)
-        }
+        //let query = PFQuery(className:"Posts")
+        //query.whereKey("groupid", equalTo: groupID!.channelUrl)
+        //query.whereKey("original", equalTo: true)
+        //do {
+            //let objects = try query.findObjects()
+            //for object in objects {
+                //let imageFile = object["image"] as! PFFileObject
+                //let urlString = imageFile.url!
+                //let url = URL(string: urlString)!
+                //challengePic.sd_setImage(with: url, completed: nil)
+            //}
+        //} catch {
+            //print(error)
+        //}
 
         
     }
     
-@objc func doubleTapped() {
-    // do something here
-}
+
     @objc func keyBoardWillBeHidden(note: Notification) {
         commentBar.inputTextView.text = nil
         showsCommentBar = false
@@ -81,9 +81,9 @@ class SingleChallengeViewController: UIViewController, UITableViewDelegate, UITa
     override var canBecomeFirstResponder: Bool {
         return showsCommentBar
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+        super.viewDidAppear(true)
         
         let query = PFQuery(className:"Posts")
         query.whereKey("groupid", equalTo: groupID?.channelUrl as Any)
@@ -100,6 +100,8 @@ class SingleChallengeViewController: UIViewController, UITableViewDelegate, UITa
             }
         }
     }
+    
+ 
     
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
         // Create the comment
@@ -161,7 +163,21 @@ class SingleChallengeViewController: UIViewController, UITableViewDelegate, UITa
             print(urlString)
             let url = URL(string: urlString)!
             
+            
             cell.photoView.sd_setImage(with: url, completed: nil)
+            cell.photoView.layer.cornerRadius = 10;
+            cell.photoView.clipsToBounds = true
+            print(post["likes"])
+            cell.numLikes.text = post["likes"] as! String
+            cell.groupID = groupID
+            cell.challengeName = challengeName
+            cell.postID = (post.objectId as? String)!
+            
+            var userWhoLiked = post["userWhoLiked"] as! [String]
+            if userWhoLiked.contains((PFUser.current()?.objectId)!) {
+                cell.smallLike.setImage(UIImage(named: "oneLike"), for: .normal)
+                
+            }
             
             return cell
             
@@ -175,7 +191,7 @@ class SingleChallengeViewController: UIViewController, UITableViewDelegate, UITa
             cell.nameLabel.text = user.username
 
             return cell
-        } else {
+        } else {	
             let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell")!
             return cell
         }
@@ -196,7 +212,7 @@ class SingleChallengeViewController: UIViewController, UITableViewDelegate, UITa
         }
         
     }
-    
+        
  
     
 
@@ -208,6 +224,12 @@ class SingleChallengeViewController: UIViewController, UITableViewDelegate, UITa
         if segue.destination is SinglePostViewController
         {
             let vc = segue.destination as? SinglePostViewController
+            vc?.groupID = groupID
+            vc?.challengeName = challengeName
+        }
+        else if segue.destination is WhatChallengeViewController
+        {
+            let vc = segue.destination as? WhatChallengeViewController
             vc?.groupID = groupID
             vc?.challengeName = challengeName
         }
