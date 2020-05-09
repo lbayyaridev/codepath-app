@@ -12,12 +12,11 @@ import AlamofireImage
 
 class EditProfileViewController:UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
 
-    
     @IBOutlet weak var imageView: UIImageView!
+    
     @IBOutlet weak var bioField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var usernameField: UITextField!
-    
     @IBOutlet weak var profileNamefield: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,9 +83,7 @@ class EditProfileViewController:UIViewController, UIImagePickerControllerDelegat
         }
         
         present(picker, animated: true, completion: nil)
-        
     }
-    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.editedImage] as! UIImage

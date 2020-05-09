@@ -10,7 +10,6 @@ import UIKit
 import Parse
 import AlamofireImage
 import MessageInputBar
-import SDWebImage
 
 class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MessageInputBarDelegate {
 
@@ -50,27 +49,19 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override var canBecomeFirstResponder: Bool{
            return showsCommentBar
     }
-    //TODO: get only your posts, global posts, and posts for groups that you are in
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let myPosts = PFQuery(className: "Posts")
-        myPosts.whereKey("author", equalTo: (PFUser.current()?.objectId)! as String)
+        let query = PFQuery(className: "Posts")
+        query.includeKey("author")
+        query.limit = 20
         
-        let globalPosts = PFQuery(className: "Posts")
-        globalPosts.whereKey("local", equalTo: 0)
-        
-        let groupPosts = PFQuery(className: "Posts")
-        //globalPosts.includeKey("Groups")
-        let query = PFQuery.orQuery(withSubqueries: [globalPosts, groupPosts])
-        myPosts.limit = 20
-        query.order(byDescending: "_created_at")
         query.findObjectsInBackground{(posts, error) in
             if posts != nil {
                 self.posts = posts!
                 self.tableView.reloadData()
             }
-            print(posts)
             
         }
     }
@@ -103,30 +94,32 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let post = posts[indexPath.section]
         let comments = (post["comments"] as? [PFObject]) ?? []
-        
+        //print("indexPath.row = \(indexPath.row)")
+        //print("comments.count = \(comments.count)")
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
             let user = post["author"] as! PFUser
-            //print("USERNAME")
-            print(user.username!)
+            print(user.username)
             cell.usernameLabel.text = user.username
+            
             cell.captionLabel.text = post["caption"] as? String
-            cell.challengeLabel.text = post["challenge"] as? String
-            print(cell.captionLabel.text!)
+            print(cell.captionLabel.text)
             let imageFile = post["image"] as! PFFileObject
             let urlString = imageFile.url!
             let url = URL(string: urlString)!
             print(urlString)
-            cell.photoView.sd_setImage(with: url, completed: nil)
+            cell.photoView.af_setImage(withURL: url)
             return cell
         }else if indexPath.row <= comments.count{
             print("HERE")
             let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as! CommentCell
             let comment = comments[indexPath.row - 1]
+            print("comment: \(comment["text"] as? String)")
             cell.commentLabel.text = comment["text"] as? String
             //cell.commentLabel.text = ""
             let user = comment["author"] as! PFUser
             cell.usernameLabel.text = user.username
+            print("USERNAME:\(user.username)")
             return cell
             
         }else{
@@ -137,13 +130,12 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @IBAction func onLogoutButton(_ sender: Any) {
-        /* PFUser.logOut()
+        PFUser.logOut()
                
                let main = UIStoryboard(name: "Main", bundle: nil)
         let loginViewController = main.instantiateViewController(withIdentifier: "LoginViewController")
                let sceneDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
                sceneDelegate.window?.rootViewController = loginViewController
- */
     }
     
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {

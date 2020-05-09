@@ -6,7 +6,11 @@ ${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework
 ${BUILT_PRODUCTS_DIR}/MessageInputBar/MessageInputBar.framework
 ${BUILT_PRODUCTS_DIR}/NYTPhotoViewer/NYTPhotoViewer.framework
 ${BUILT_PRODUCTS_DIR}/Parse/Parse.framework
+${PODS_ROOT}/PhotoEditorSDK/PhotoEditorSDK/PhotoEditorSDK.framework
+${PODS_ROOT}/PhotoEditorSDK/PhotoEditorSDK/PhotoEditorSDK.framework.dSYM
 ${BUILT_PRODUCTS_DIR}/RSKImageCropper/RSKImageCropper.framework
 ${BUILT_PRODUCTS_DIR}/RSKPlaceholderTextView/RSKPlaceholderTextView.framework
 ${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
 ${PODS_ROOT}/SendBirdSDK/SendBirdSDK.framework
+${PODS_ROOT}/imglyKit/PhotoEditorSDK/ImglyKit.framework
+${PODS_ROOT}/imglyKit/PhotoEditorSDK/ImglyKit.framework.dSYM
