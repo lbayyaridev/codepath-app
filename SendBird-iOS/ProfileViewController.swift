@@ -52,7 +52,6 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
                 self.postsTableView.reloadData()
             }
             
-            print("COUNT: \(self.count)")
         }
      
     }

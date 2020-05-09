@@ -13,9 +13,7 @@ import MessageInputBar
 import SDWebImage
 import QuartzCore
 
-@available(iOS 13.0, *)
-@available(iOS 13.0, *)
-@available(iOS 13.0, *)
+
 @available(iOS 13.0, *)
 class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MessageInputBarDelegate {
 
@@ -61,7 +59,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let query = PFQuery(className: "Posts")
         query.includeKeys(["author","comments","comments.author"])
         query.limit = 20
-        
+        query.whereKey("original", equalTo: false)
         query.findObjectsInBackground{
             (posts, error) in
             if posts != nil{
