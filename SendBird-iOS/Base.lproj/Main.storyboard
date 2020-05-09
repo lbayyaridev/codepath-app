@@ -366,7 +366,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K3x-Fi-Yb9">
-                                <rect key="frame" x="0.0" y="0.0" width="412" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="413" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" red="1" green="0.0" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
@@ -533,7 +533,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A6G-YG-hJ1">
-                                <rect key="frame" x="0.0" y="0.0" width="412" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="413" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" red="1" green="0.0" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
@@ -935,42 +935,52 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9U-E9-llh">
-                                                    <rect key="frame" x="15" y="11" width="114" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9U-E9-llh">
+                                                    <rect key="frame" x="15" y="11" width="29" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Identity theft is a crime" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMW-eM-lfy">
-                                                    <rect key="frame" x="148" y="10" width="303" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identity theft is a crime" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMW-eM-lfy">
+                                                    <rect key="frame" x="56.000000000000014" y="11" width="175.33333333333337" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="h9U-E9-llh" firstAttribute="leading" secondItem="cmJ-Mw-n9r" secondAttribute="leading" constant="15" id="4RP-6x-nzH"/>
+                                                <constraint firstItem="h9U-E9-llh" firstAttribute="top" secondItem="cmJ-Mw-n9r" secondAttribute="top" constant="11" id="7LP-23-8pT"/>
+                                                <constraint firstItem="zMW-eM-lfy" firstAttribute="top" secondItem="cmJ-Mw-n9r" secondAttribute="topMargin" id="H0I-yP-Mxx"/>
+                                                <constraint firstItem="zMW-eM-lfy" firstAttribute="leading" secondItem="h9U-E9-llh" secondAttribute="trailing" constant="12" id="Imk-H7-EpU"/>
+                                                <constraint firstItem="h9U-E9-llh" firstAttribute="top" secondItem="cmJ-Mw-n9r" secondAttribute="top" constant="11" id="RAZ-3X-Eau"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="commentLabel" destination="zMW-eM-lfy" id="Tda-MS-Gs1"/>
                                             <outlet property="usernameLabel" destination="h9U-E9-llh" id="VrM-lU-UB6"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddCommentCell" rowHeight="20" id="aDE-AU-DZV">
-                                        <rect key="frame" x="0.0" y="462" width="414" height="20"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddCommentCell" rowHeight="56" id="aDE-AU-DZV">
+                                        <rect key="frame" x="0.0" y="462" width="414" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aDE-AU-DZV" id="vfc-lo-puT">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add a comment..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jN6-hX-n3Z">
-                                                    <rect key="frame" x="15" y="19" width="193" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a comment..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jN6-hX-n3Z">
+                                                    <rect key="frame" x="35" y="30" width="153" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jN6-hX-n3Z" firstAttribute="top" secondItem="vfc-lo-puT" secondAttribute="topMargin" constant="19" id="Nrf-lA-3qb"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="jN6-hX-n3Z" secondAttribute="bottom" constant="16" id="Vz0-6c-XuI"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="jN6-hX-n3Z" secondAttribute="trailing" constant="206" id="k29-RP-nxL"/>
+                                                <constraint firstItem="jN6-hX-n3Z" firstAttribute="leading" secondItem="vfc-lo-puT" secondAttribute="leadingMargin" constant="15" id="kpc-SZ-wOi"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
