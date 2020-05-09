@@ -23,10 +23,10 @@ class EditProfileViewController:UIViewController, UIImagePickerControllerDelegat
     
         // Load the the current user data
         let user = PFUser.current()
-        usernameField.placeholder = user?.username!
-        profileNamefield.placeholder = user?["profileName"] as? String
+        usernameField.text = user?.username!
+        profileNamefield.text = user?["profileName"] as? String
         passwordField.placeholder = "Enter new password"
-        bioField.placeholder = user?["bio"] as? String
+        bioField.text = user?["bio"] as? String
         if user?["image"] != nil{
             let imageFile = user?["image"] as! PFFileObject
             let urlString = imageFile.url!
@@ -35,7 +35,7 @@ class EditProfileViewController:UIViewController, UIImagePickerControllerDelegat
         }
         
         
-                // Tap to exit keyboard
+        // Tap to exit keyboard
         let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         // Tap to exit Keyboard
@@ -100,7 +100,9 @@ class EditProfileViewController:UIViewController, UIImagePickerControllerDelegat
         
         if let currentUser = PFUser.current(){
             currentUser.username = usernameField.text
-            currentUser.password = passwordField.text
+            if (passwordField.text != "") {
+                currentUser.password = passwordField.text
+            }
             currentUser["bio"] = bioField.text
             currentUser["profileName"] = profileNamefield.text
             currentUser["image"] = file
