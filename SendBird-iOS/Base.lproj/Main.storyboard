@@ -452,10 +452,6 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="dataSource" destination="CDy-Mb-51I" id="j9w-Rj-zxG"/>
-                                    <outlet property="delegate" destination="CDy-Mb-51I" id="tT2-Ki-nyg"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
