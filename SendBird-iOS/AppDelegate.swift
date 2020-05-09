@@ -14,6 +14,7 @@ import AVFoundation
 import Alamofire
 import AlamofireImage
 import Parse
+import PhotoEditorSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, SBDChannelDelegate {
@@ -52,6 +53,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             let viewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController")
             window.rootViewController = viewController
             window.makeKeyAndVisible()
+        }
+        if let licenseURL = Bundle.main.url(forResource: "ios_license", withExtension: "") {
+          PESDK.unlockWithLicense(at: licenseURL)
         }
         
         return true

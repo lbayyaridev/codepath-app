@@ -13,10 +13,10 @@ target 'SendBird-iOS' do
   pod 'NYTPhotoViewer', '~> 1.1.0'
   pod 'FLAnimatedImage', '~> 1.0'
   pod 'SDWebImage'
-
   pod "Parse"
   pod "RSKPlaceholderTextView"
   pod "MessageInputBar"
+  pod "PhotoEditorSDK"
 
 
 end
