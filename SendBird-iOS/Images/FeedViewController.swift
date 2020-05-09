@@ -11,6 +11,7 @@ import Parse
 import AlamofireImage
 import MessageInputBar
 import SDWebImage
+import QuartzCore
 
 class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MessageInputBarDelegate {
 
@@ -53,24 +54,16 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //TODO: get only your posts, global posts, and posts for groups that you are in
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        let query = PFQuery(className: "Posts")
+        query.includeKeys(["author","comments","comments.author"])
+        query.limit = 20
         
-        let myPosts = PFQuery(className: "Posts")
-        myPosts.whereKey("author", equalTo: (PFUser.current()?.objectId)! as String)
-        
-        let globalPosts = PFQuery(className: "Posts")
-        globalPosts.whereKey("local", equalTo: 0)
-        
-        let groupPosts = PFQuery(className: "Posts")
-        //globalPosts.includeKey("Groups")
-        let query = PFQuery.orQuery(withSubqueries: [globalPosts, groupPosts])
-        myPosts.limit = 20
-        query.order(byDescending: "_created_at")
-        query.findObjectsInBackground{(posts, error) in
-            if posts != nil {
+        query.findObjectsInBackground{
+            (posts, error) in
+            if posts != nil{
                 self.posts = posts!
                 self.tableView.reloadData()
             }
-            print(posts)
             
         }
     }
@@ -118,6 +111,13 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let url = URL(string: urlString)!
             print(urlString)
             cell.photoView.sd_setImage(with: url, completed: nil)
+            
+                        
+            cell.photoView.layer.cornerRadius = 10;
+            cell.photoView.clipsToBounds = true
+            cell.numLikes.text = post["likes"] as! String
+            cell.postID = (post.objectId ?? "")
+            
             return cell
         }else if indexPath.row <= comments.count{
             print("HERE")
@@ -127,7 +127,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             //cell.commentLabel.text = ""
             let user = comment["author"] as! PFUser
             cell.usernameLabel.text = user.username
-            return cell
+          return cell
             
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell")!

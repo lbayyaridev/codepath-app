@@ -15,12 +15,13 @@ import PhotoEditorSDK
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
+
     @IBOutlet weak var challengeLabel: UILabel!
     var challenge = ""
     @IBOutlet weak var commentField: UITextField!
     
     @IBAction func onCameraButton(_ sender: Any) {
-        /* let picker = UIImagePickerController()
+         let picker = UIImagePickerController()
          picker.delegate = self
          picker.allowsEditing = true
          if UIImagePickerController.isSourceTypeAvailable(.camera){
@@ -28,33 +29,8 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
          }else{
          picker.sourceType = .photoLibrary
          }
-         present(picker, animated: true, completion: nil) */
-        let cameraViewController = CameraViewController()
-        cameraViewController.dataCompletionBlock = { [unowned cameraViewController] data in
-            guard let data = data else {
-                return
-            }
-            
-            let photo = Photo(data: data)
-            let photoEditViewController = PhotoEditViewController(photoAsset: photo)
-            photoEditViewController.delegate = self
-            
-            cameraViewController.present(photoEditViewController, animated: true, completion: nil)
-        }
-        
-        cameraViewController.completionBlock = { [unowned cameraViewController] image, _ in
-            guard let image = image else {
-                return
-            }
-            
-            let photo = Photo(image: image)
-            let photoEditViewController = PhotoEditViewController(photoAsset: photo)
-            photoEditViewController.delegate = self
-            
-            cameraViewController.present(photoEditViewController, animated: true, completion: nil)
-        }
-        
-        present(cameraViewController, animated: true, completion: nil)
+         present(picker, animated: true, completion: nil)
+
     }
         
     
@@ -77,6 +53,8 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         let file = PFFileObject(data: imageData!)
         post["image"] = file
         post["local"] = false
+        post["likes"] = "0"
+        post["userWhoLiked"] = [String]()
         post["groupid"] = "no groupid"
         post.saveInBackground{ (success, error) in
             if success{

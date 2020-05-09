@@ -1063,7 +1063,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFU-YQ-bRf">
                                                 <rect key="frame" x="270" y="80" width="64" height="64"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Challenges" image="challenges"/>
+                                                <state key="normal" title="Challenges" image="sports-and-competition"/>
                                                 <connections>
                                                     <segue destination="GHz-H9-ZF5" kind="show" id="4TV-qK-AfQ"/>
                                                 </connections>
@@ -1672,7 +1672,6 @@
     <resources>
         <image name="bell" width="512" height="512"/>
         <image name="camera.fill" catalog="system" width="128" height="96"/>
-        <image name="challenges" width="512" height="512"/>
         <image name="emptyLike" width="512" height="512"/>
         <image name="img_blocked_user_cover" width="38" height="38"/>
         <image name="img_btn_edit_channel_name" width="36" height="36"/>
@@ -1689,6 +1688,7 @@
         <image name="oneLike" width="512" height="512"/>
         <image name="plus" width="512" height="512"/>
         <image name="plus-2" width="512" height="512"/>
+        <image name="sports-and-competition" width="512" height="512"/>
         <image name="strong" width="512" height="512"/>
         <namedColor name="color_admin_message_bg">
             <color red="0.93699997663497925" green="0.93699997663497925" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
