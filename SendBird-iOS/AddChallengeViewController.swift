@@ -27,10 +27,11 @@ class AddChallengeViewController: UIViewController {
         submitButton.layer.cornerRadius = 5
         submitButton.layer.masksToBounds = true
         
-                        // Tap to exit keyboard
+        // Tap to exit keyboard
         let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
-        // Tap to exit Keyboard        // Do any additional setup after loading the view.
+        // Tap to exit Keyboard
+        // Do any additional setup after loading the view.
         
         
     }
