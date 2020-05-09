@@ -54,6 +54,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         post["image"] = file
         post["local"] = false
         post["likes"] = "0"
+        post["original"] = false
         post["userWhoLiked"] = [String]()
         post["groupid"] = "no groupid"	
         post.saveInBackground{ (success, error) in

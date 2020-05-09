@@ -950,13 +950,13 @@
 				CODE_SIGN_ENTITLEMENTS = "SendBird-iOS/SendBird-iOS.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RZ4H8B3D58;
+				DEVELOPMENT_TEAM = 5Z2QU5939G;
 				INFOPLIST_FILE = "SendBird-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = .com.chally;
+				PRODUCT_BUNDLE_IDENTIFIER = .com.chally.1234;
 				PRODUCT_NAME = Chally;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = SIMULATOR;
@@ -973,13 +973,13 @@
 				CODE_SIGN_ENTITLEMENTS = "SendBird-iOS/SendBird-iOS.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RZ4H8B3D58;
+				DEVELOPMENT_TEAM = 5Z2QU5939G;
 				INFOPLIST_FILE = "SendBird-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = .com.chally;
+				PRODUCT_BUNDLE_IDENTIFIER = .com.chally.1234;
 				PRODUCT_NAME = Chally;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
