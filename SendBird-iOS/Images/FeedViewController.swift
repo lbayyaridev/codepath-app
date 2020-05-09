@@ -55,6 +55,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let query = PFQuery(className: "Posts")
+        query.whereKey("original", equalTo: false)
         query.includeKeys(["author","comments","comments.author"])
         query.limit = 20
         
@@ -117,6 +118,12 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             cell.photoView.clipsToBounds = true
             cell.numLikes.text = post["likes"] as! String
             cell.postID = (post.objectId ?? "")
+            
+            var userWhoLiked = post["userWhoLiked"] as! [String]
+            if userWhoLiked.contains((PFUser.current()?.objectId)!) {
+                cell.smallLike.setImage(UIImage(named: "oneLike"), for: .normal)
+                
+            }
             
             return cell
         }else if indexPath.row <= comments.count{

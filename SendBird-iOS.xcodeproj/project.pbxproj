@@ -153,7 +153,7 @@
 		D75E599D2465396700EC1EF7 /* SearchChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchChallengeViewController.swift; sourceTree = "<group>"; };
 		D75E599F246556CF00EC1EF7 /* AddChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChallengeViewController.swift; sourceTree = "<group>"; };
 		E21C53E32195DB7900782B60 /* GroupChannelSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChannelSettingsViewController.swift; sourceTree = "<group>"; };
-		E21CDFC12165619000839683 /* SendBird-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SendBird-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E21CDFC12165619000839683 /* Chally.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chally.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E21CDFC42165619000839683 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E21CDFC62165619000839683 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E21CDFC92165619000839683 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -297,7 +297,7 @@
 		E21CDFC22165619000839683 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E21CDFC12165619000839683 /* SendBird-iOS.app */,
+				E21CDFC12165619000839683 /* Chally.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -593,7 +593,7 @@
 			);
 			name = "SendBird-iOS";
 			productName = "SendBird-iOS";
-			productReference = E21CDFC12165619000839683 /* SendBird-iOS.app */;
+			productReference = E21CDFC12165619000839683 /* Chally.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -953,7 +953,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = .com.chally;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Chally;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = SIMULATOR;
 				SWIFT_VERSION = 4.2;
@@ -976,7 +976,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = .com.chally;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Chally;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -322,11 +322,11 @@
             <objects>
                 <viewController title="Group Posts" id="GHz-H9-ZF5" customClass="ChallengesViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ss1-Wi-A8s">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lPp-Gw-rzd">
-                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7UC-KY-jvC">
                                     <size key="itemSize" width="261" height="208"/>
@@ -459,11 +459,11 @@
             <objects>
                 <viewController id="WkL-XQ-enD" customClass="GroupChannelSettingsViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Gun-vA-b8P">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" sectionIndexMinimumDisplayRowCount="4" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="bMU-AL-XZ0">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="GroupChannelSettingsChannelCoverNameTableViewCell" rowHeight="139" id="8Gx-IQ-dRY" customClass="GroupChannelSettingsChannelCoverNameTableViewCell" customModule="SendBird_iOS" customModuleProvider="target">
@@ -753,7 +753,7 @@
                                 <sections/>
                             </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="rwK-2P-xCz" customClass="CustomActivityIndicatorView" customModule="SendBird_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" name="color_channel_settings_bg"/>
@@ -786,11 +786,11 @@
             <objects>
                 <viewController id="LMb-Wy-W9e" customClass="GroupChannelInviteMemberViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="hLs-Cx-SLb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5aH-4L-jnK">
-                                <rect key="frame" x="0.0" y="44" width="414" height="70"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="6ZO-Sb-zpO"/>
@@ -804,11 +804,11 @@
                                 <cells/>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WWa-Ua-705">
-                                <rect key="frame" x="0.0" y="114" width="414" height="622"/>
+                                <rect key="frame" x="0.0" y="70" width="414" height="622"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="s9c-PZ-Xm6" customClass="CustomActivityIndicatorView" customModule="SendBird_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -844,11 +844,11 @@
             <objects>
                 <viewController id="A0V-Hi-H9j" customClass="UserProfileViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2Ic-q1-H33">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3AJ-Lz-z0z">
-                                <rect key="frame" x="0.0" y="44" width="414" height="121"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="121"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_default_profile_image_4" translatesAutoresizingMaskIntoConstraints="NO" id="Y0j-cL-ZOc" userLabel="Profile Image View">
                                         <rect key="frame" x="15" y="10.666666666666664" width="100" height="100"/>
@@ -931,11 +931,11 @@
             <objects>
                 <viewController id="uUn-AC-KUB" customClass="GroupChannelCoverImageNameSettingViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Dju-38-emj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0du-kn-47v" userLabel="Container View">
-                                <rect key="frame" x="0.0" y="44" width="414" height="120"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgc-FM-u7u" customClass="ProfileImageView" customModule="SendBird_iOS" customModuleProvider="target">
                                         <rect key="frame" x="15" y="10" width="100" height="100"/>
@@ -1019,15 +1019,15 @@
             <objects>
                 <viewController storyboardIdentifier="GrouplChatViewController" id="ESq-tY-gjT" customClass="GroupChannelChatViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="CQq-dl-bWx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jaE-X5-4Cj" userLabel="Message Table View">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="556"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="512"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WuF-Dg-dkJ" userLabel="Typing Indicator Container View">
-                                <rect key="frame" x="0.0" y="556" width="414" height="30"/>
+                                <rect key="frame" x="0.0" y="512" width="414" height="30"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DMA-AS-cxg" userLabel="Typing Indicator Image View" customClass="FLAnimatedImageView">
                                         <rect key="frame" x="14" y="12.666666666666629" width="18" height="5"/>
@@ -1055,7 +1055,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QuK-mS-w71" userLabel="Input Message Container View">
-                                <rect key="frame" x="0.0" y="586" width="414" height="150"/>
+                                <rect key="frame" x="0.0" y="542" width="414" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fuE-Ad-gK4" userLabel="Input Message Inner Container View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
@@ -1177,10 +1177,10 @@
                                 </constraints>
                             </view>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="x4w-rc-Oaf" customClass="CustomActivityIndicatorView" customModule="SendBird_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                             </activityIndicatorView>
                             <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0az-YP-nSf" userLabel="Toast View">
-                                <rect key="frame" x="147" y="312.66666666666669" width="120" height="111"/>
+                                <rect key="frame" x="147" y="290.66666666666669" width="120" height="111"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_toast_check" translatesAutoresizingMaskIntoConstraints="NO" id="NS8-lD-OUL" userLabel="Toast Check Image View">
                                         <rect key="frame" x="40" y="33" width="40" height="32"/>
@@ -1280,9 +1280,10 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="oiI-8W-aFC" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MRH-Gs-gcK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="MRH-Gs-gcK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1337,15 +1338,6 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1UY-FW-F6B">
-                                <rect key="frame" x="100" y="481" width="214" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="color_group_channel_unread_count_bg"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Edit Participation">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Bhp-4c-tMV"/>
@@ -1404,11 +1396,11 @@
             <objects>
                 <viewController title="Single Challenge" id="m6i-c3-q4d" customClass="SingleChallengeViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qe4-uc-Q05">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S96-fP-fG8">
-                                <rect key="frame" x="0.0" y="131" width="414" height="605"/>
+                                <rect key="frame" x="0.0" y="76" width="414" height="660"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
@@ -1419,12 +1411,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="361"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndn-Yu-IXE">
-                                                    <rect key="frame" x="20" y="338.33333333333331" width="41" height="21.666666666666686"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a nifty photo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v36-N3-W5X">
                                                     <rect key="frame" x="68.999999999999986" y="340" width="149.66666666666663" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1462,6 +1448,12 @@
                                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndn-Yu-IXE">
+                                                    <rect key="frame" x="20" y="338.33333333333331" width="41" height="21.666666666666686"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="ndn-Yu-IXE" firstAttribute="top" secondItem="arP-zN-imK" secondAttribute="bottom" constant="49.329999999999998" id="2Is-VU-Cu4"/>
@@ -1497,13 +1489,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glu-nd-rro">
-                                                    <rect key="frame" x="16" y="8.0000000000000018" width="41" height="20.666666666666671"/>
+                                                    <rect key="frame" x="20" y="8" width="41" height="20.666666666666664"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a comment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mt-NS-QUB">
-                                                    <rect key="frame" x="65.000000000000014" y="7.9999999999999982" width="139.33333333333337" height="20.333333333333329"/>
+                                                    <rect key="frame" x="69" y="8" width="139.33333333333331" height="20.333333333333332"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1511,7 +1503,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="9mt-NS-QUB" firstAttribute="leading" secondItem="glu-nd-rro" secondAttribute="trailing" constant="8" id="9Iq-lK-uRO"/>
-                                                <constraint firstItem="glu-nd-rro" firstAttribute="leading" secondItem="Up3-BC-xmo" secondAttribute="leading" constant="16" id="Sj1-WR-bKS"/>
+                                                <constraint firstItem="glu-nd-rro" firstAttribute="leading" secondItem="Up3-BC-xmo" secondAttribute="leading" constant="20" id="Sj1-WR-bKS"/>
                                                 <constraint firstItem="9mt-NS-QUB" firstAttribute="top" secondItem="Up3-BC-xmo" secondAttribute="top" constant="8" id="WBe-wF-JXE"/>
                                                 <constraint firstItem="glu-nd-rro" firstAttribute="top" secondItem="Up3-BC-xmo" secondAttribute="top" constant="8" id="and-pN-vb8"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9mt-NS-QUB" secondAttribute="trailing" constant="8" id="clB-pg-yIz"/>
@@ -1549,7 +1541,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8x-ph-GHo">
-                                <rect key="frame" x="354" y="656" width="50" height="50"/>
+                                <rect key="frame" x="334" y="612" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Yjc-0x-ZDM"/>
                                     <constraint firstAttribute="width" constant="50" id="fmO-fp-drq"/>
@@ -1560,7 +1552,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8O-zh-gX6">
-                                <rect key="frame" x="0.0" y="55" width="414" height="68"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="68"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="U8O-zh-gX6" secondAttribute="height" multiplier="207:26" constant="-127.38461538461536" id="oV4-mG-MnU"/>
@@ -1572,9 +1564,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="U8O-zh-gX6" firstAttribute="top" secondItem="Qe4-uc-Q05" secondAttribute="top" constant="55" id="BiY-A1-SPi"/>
+                            <constraint firstItem="U8O-zh-gX6" firstAttribute="top" secondItem="Qe4-uc-Q05" secondAttribute="top" id="BiY-A1-SPi"/>
                             <constraint firstItem="U8O-zh-gX6" firstAttribute="trailing" secondItem="Qe4-uc-Q05" secondAttribute="trailing" id="aC7-Se-V7u"/>
-                            <constraint firstAttribute="trailing" secondItem="F8x-ph-GHo" secondAttribute="trailing" constant="10" id="hma-cY-ewp"/>
+                            <constraint firstAttribute="trailing" secondItem="F8x-ph-GHo" secondAttribute="trailing" constant="30" id="hma-cY-ewp"/>
                             <constraint firstAttribute="bottom" secondItem="F8x-ph-GHo" secondAttribute="bottom" constant="30" id="uBl-jR-0Je"/>
                             <constraint firstItem="U8O-zh-gX6" firstAttribute="leading" secondItem="Qe4-uc-Q05" secondAttribute="leading" id="vqF-Ay-tKl"/>
                         </constraints>

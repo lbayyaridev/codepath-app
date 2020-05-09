@@ -55,7 +55,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         post["local"] = false
         post["likes"] = "0"
         post["userWhoLiked"] = [String]()
-        post["groupid"] = "no groupid"
+        post["groupid"] = "no groupid"	
         post.saveInBackground{ (success, error) in
             if success{
                 self.dismiss(animated: true, completion: nil)

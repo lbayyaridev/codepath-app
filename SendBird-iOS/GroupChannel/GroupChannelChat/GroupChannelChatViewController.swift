@@ -218,7 +218,7 @@ class GroupChannelChatViewController: UIViewController, UITableViewDelegate, UIT
         self.typingIndicatorTimer?.invalidate()
         DispatchQueue.main.async {
             self.typingIndicatorContainerView.isHidden = true
-            self.messageTableViewBottomMargin.constant = 0
+            //self.messageTableViewBottomMargin.constant = 0
             self.view.updateConstraints()
             self.view.layoutIfNeeded()
             
@@ -1198,7 +1198,7 @@ class GroupChannelChatViewController: UIViewController, UITableViewDelegate, UIT
         else {
             DispatchQueue.main.async {
                 self.typingIndicatorContainerView.isHidden = true
-                self.messageTableViewBottomMargin.constant = 0
+                //self.messageTableViewBottomMargin.constant = 0
                 self.view.updateConstraints()
                 self.view.layoutIfNeeded()
                 
