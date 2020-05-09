@@ -91,11 +91,12 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
                 self.postsTableView.reloadData()
             }
             
-            self.numPosts.text = String(self.count)
         }
 
         let groups = (user?["groups"])! as! Array<Any>
-        print("COUNT HERE: \(count)")
+        print("numPosts: \(count)")
+        print("numGroups: \(groups.count)")
+        self.numPosts.text = String(self.count)
         numGroups.text = String(groups.count)
         
         
