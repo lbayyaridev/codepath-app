@@ -10,6 +10,7 @@ import UIKit
 
 class AddChallengeViewController: UIViewController {
 
+    @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var challengeNameField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +23,20 @@ class AddChallengeViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        //pass selected movie to the details view controller
-        let detailsViewController = segue.destination as! CameraViewController
-        detailsViewController.challenge = challengeNameField.text!
+        //pass new challenge name to camera view controller
+        if submitButton.isTouchInside{
+            print("clicked")
+            let detailsViewController = segue.destination as! CameraViewController
+            detailsViewController.challenge = challengeNameField.text!
+        }
         
     }
+    
+    func pressed(sender: UIButton!) -> Bool{
+        return true
+    }
+    
+    
     
     
     

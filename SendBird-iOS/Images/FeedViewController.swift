@@ -50,19 +50,27 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override var canBecomeFirstResponder: Bool{
            return showsCommentBar
     }
-    
+    //TODO: get only your posts, global posts, and posts for groups that you are in
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let query = PFQuery(className: "Posts")
-        query.includeKey("author")
-        query.limit = 20
+        let myPosts = PFQuery(className: "Posts")
+        myPosts.whereKey("author", equalTo: (PFUser.current()?.objectId)! as String)
         
+        let globalPosts = PFQuery(className: "Posts")
+        globalPosts.whereKey("local", equalTo: 0)
+        
+        let groupPosts = PFQuery(className: "Posts")
+        //globalPosts.includeKey("Groups")
+        let query = PFQuery.orQuery(withSubqueries: [globalPosts, groupPosts])
+        myPosts.limit = 20
+        query.order(byDescending: "_created_at")
         query.findObjectsInBackground{(posts, error) in
             if posts != nil {
                 self.posts = posts!
                 self.tableView.reloadData()
             }
+            print(posts)
             
         }
     }
@@ -95,17 +103,16 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let post = posts[indexPath.section]
         let comments = (post["comments"] as? [PFObject]) ?? []
-        //print("indexPath.row = \(indexPath.row)")
-        //print("comments.count = \(comments.count)")
+        
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
             let user = post["author"] as! PFUser
-            
-            print(user.username)
+            //print("USERNAME")
+            print(user.username!)
             cell.usernameLabel.text = user.username
             cell.captionLabel.text = post["caption"] as? String
             cell.challengeLabel.text = post["challenge"] as? String
-            print(cell.captionLabel.text)
+            print(cell.captionLabel.text!)
             let imageFile = post["image"] as! PFFileObject
             let urlString = imageFile.url!
             let url = URL(string: urlString)!
@@ -116,12 +123,10 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             print("HERE")
             let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as! CommentCell
             let comment = comments[indexPath.row - 1]
-            print("AUTHOR: \(comment["author"])")
             cell.commentLabel.text = comment["text"] as? String
             //cell.commentLabel.text = ""
             let user = comment["author"] as! PFUser
             cell.usernameLabel.text = user.username
-            print("USERNAME:\(user.username)")
             return cell
             
         }else{

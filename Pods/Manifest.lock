@@ -4,6 +4,7 @@ PODS:
     - Alamofire (~> 4.9)
   - Bolts/Tasks (1.9.1)
   - FLAnimatedImage (1.0.12)
+  - imglyKit (10.11.0)
   - MessageInputBar (0.4.1):
     - MessageInputBar/Core (= 0.4.1)
   - MessageInputBar/Core (0.4.1)
@@ -18,6 +19,8 @@ PODS:
     - Parse/Core (= 1.18.0)
   - Parse/Core (1.18.0):
     - Bolts/Tasks (= 1.9.1)
+  - PhotoEditorSDK (10.11.0):
+    - imglyKit (= 10.11.0)
   - RSKImageCropper (2.2.3)
   - RSKPlaceholderTextView (6.0.3)
   - SDWebImage (5.7.4):
@@ -31,6 +34,7 @@ DEPENDENCIES:
   - MessageInputBar
   - NYTPhotoViewer (~> 1.1.0)
   - Parse
+  - PhotoEditorSDK
   - RSKImageCropper
   - RSKPlaceholderTextView
   - SDWebImage
@@ -42,9 +46,11 @@ SPEC REPOS:
     - AlamofireImage
     - Bolts
     - FLAnimatedImage
+    - imglyKit
     - MessageInputBar
     - NYTPhotoViewer
     - Parse
+    - PhotoEditorSDK
     - RSKImageCropper
     - RSKPlaceholderTextView
     - SDWebImage
@@ -55,14 +61,16 @@ SPEC CHECKSUMS:
   AlamofireImage: be9963c6582d68b39e89191f64c82a7d7bf40fdd
   Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  imglyKit: 1833a7f374005ea9483eb050f1bca80894bcadef
   MessageInputBar: e81c7535347f1f7b923de7080409a535a004b6e4
   NYTPhotoViewer: e80e8767f3780d2df37c6f72cbab15d6c7232911
   Parse: 79bdda34fdb7eb2a707a43a951c8aae236cb3e34
+  PhotoEditorSDK: 19b064295d525181e18337c4223e7c7777158d0b
   RSKImageCropper: a446db0e8444a036b34f3c43db01b2373baa4b2a
   RSKPlaceholderTextView: fc8c8932546298ec9d5e5572284aa42adb87b066
   SDWebImage: 48b88379b798fd1e4298f95bb25d2cdabbf4deb3
   SendBirdSDK: c16c053159760122a553e40ffe7c6d7c4cda368b
 
-PODFILE CHECKSUM: 1129a5cfa7929eba23f151e95145a09082e91719
+PODFILE CHECKSUM: 68e58a0d0aae26f969a899caf8e36507db5a745b
 
 COCOAPODS: 1.8.4

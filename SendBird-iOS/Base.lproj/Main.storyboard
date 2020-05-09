@@ -439,6 +439,23 @@
                                 <rect key="frame" x="0.0" y="295" width="375" height="352"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="82" id="CUn-CZ-Nch">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="82"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CUn-CZ-Nch" id="NSE-en-8hr">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="CDy-Mb-51I" id="j9w-Rj-zxG"/>
+                                    <outlet property="delegate" destination="CDy-Mb-51I" id="tT2-Ki-nyg"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -453,7 +470,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gnd-tz-Pew" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1302" y="1286"/>
+            <point key="canvasLocation" x="1301.5999999999999" y="1285.9070464767617"/>
         </scene>
         <!--Edit Profile View Controller-->
         <scene sceneID="OIz-El-vlS">
@@ -632,6 +649,7 @@
                     <navigationItem key="navigationItem" id="qoh-kF-i7j"/>
                     <connections>
                         <outlet property="challengeNameField" destination="J99-eH-fQY" id="G0n-HV-R3i"/>
+                        <outlet property="submitButton" destination="nZe-eg-pdM" id="L0h-Um-lS0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZk-fa-Rl0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
