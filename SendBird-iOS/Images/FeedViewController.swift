@@ -13,6 +13,8 @@ import MessageInputBar
 import SDWebImage
 import QuartzCore
 
+
+@available(iOS 13.0, *)
 class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MessageInputBarDelegate {
 
     @IBOutlet weak var tableView: UITableView!
@@ -58,7 +60,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         query.whereKey("original", equalTo: false)
         query.includeKeys(["author","comments","comments.author"])
         query.limit = 20
-        
+        query.whereKey("original", equalTo: false)
         query.findObjectsInBackground{
             (posts, error) in
             if posts != nil{
@@ -144,13 +146,13 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @IBAction func onLogoutButton(_ sender: Any) {
-        /* PFUser.logOut()
-               
-               let main = UIStoryboard(name: "Main", bundle: nil)
+        PFUser.logOut()
+        ConnectionManager.logout{}
+        let main = UIStoryboard(name: "Main", bundle: nil)
         let loginViewController = main.instantiateViewController(withIdentifier: "LoginViewController")
                let sceneDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
                sceneDelegate.window?.rootViewController = loginViewController
- */
+ 
     }
     
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
