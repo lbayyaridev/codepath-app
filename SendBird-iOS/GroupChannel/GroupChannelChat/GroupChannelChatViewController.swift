@@ -1186,7 +1186,7 @@ class GroupChannelChatViewController: UIViewController, UITableViewDelegate, UIT
             DispatchQueue.main.async {
                 self.typingIndicatorContainerView.isHidden = false
                 self.typingIndicatorLabel.text = typingIndicatorText
-                self.messageTableViewBottomMargin.constant = self.typingIndicatorContainerViewHeight.constant
+                //self.messageTableViewBottomMargin.constant = self.typingIndicatorContainerViewHeight.constant
                 self.view.updateConstraints()
                 self.view.layoutIfNeeded()
                 

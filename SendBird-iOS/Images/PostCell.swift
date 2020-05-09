@@ -39,8 +39,8 @@ class PostCell: UITableViewCell {
             
             let tap = UITapGestureRecognizer(target: self, action: #selector(didDoubleTap))
             tap.numberOfTapsRequired = 2
-            
             photoView.addGestureRecognizer(tap)
+        
     }
 
     @IBAction func tapLike(_ sender: Any) {
