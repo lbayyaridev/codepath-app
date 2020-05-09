@@ -81,9 +81,9 @@ class SingleChallengeViewController: UIViewController, UITableViewDelegate, UITa
     override var canBecomeFirstResponder: Bool {
         return showsCommentBar
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+        super.viewDidAppear(true)
         
         let query = PFQuery(className:"Posts")
         query.whereKey("groupid", equalTo: groupID?.channelUrl as Any)
@@ -100,6 +100,8 @@ class SingleChallengeViewController: UIViewController, UITableViewDelegate, UITa
             }
         }
     }
+    
+ 
     
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
         // Create the comment
@@ -165,10 +167,18 @@ class SingleChallengeViewController: UIViewController, UITableViewDelegate, UITa
             cell.photoView.sd_setImage(with: url, completed: nil)
             cell.photoView.layer.cornerRadius = 10;
             cell.photoView.clipsToBounds = true
-            cell.numLikes.text = post["likes"] as? String
+            print(post["likes"])
+            cell.numLikes.text = post["likes"] as! String
             cell.groupID = groupID
             cell.challengeName = challengeName
             cell.postID = (post.objectId as? String)!
+            
+            var userWhoLiked = post["userWhoLiked"] as! [String]
+            if userWhoLiked.contains((PFUser.current()?.objectId)!) {
+                cell.smallLike.setImage(UIImage(named: "oneLike"), for: .normal)
+                
+            }
+            
             return cell
             
         } else if indexPath.row <= comments.count {
@@ -202,9 +212,7 @@ class SingleChallengeViewController: UIViewController, UITableViewDelegate, UITa
         }
         
     }
-    
-    
-    
+        
  
     
 

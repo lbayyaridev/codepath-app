@@ -1451,6 +1451,9 @@
                                                         <constraint firstAttribute="width" secondItem="VOC-Rl-FL1" secondAttribute="height" multiplier="1:1" id="8NI-Mb-hwq"/>
                                                     </constraints>
                                                     <state key="normal" title="Like" image="emptyLike"/>
+                                                    <connections>
+                                                        <action selector="tapLike:" destination="8WV-Ez-r72" eventType="touchUpInside" id="Sxr-Qc-fC9"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xs-D2-B76">
                                                     <rect key="frame" x="88" y="307" width="43" height="21"/>
@@ -1598,9 +1601,9 @@
         <!--Single Post-->
         <scene sceneID="yaF-7q-iel">
             <objects>
-                <viewController title="Single Post" id="Xxu-Mm-5MQ" customClass="SinglePostViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Single Post" modalPresentationStyle="fullScreen" id="Xxu-Mm-5MQ" customClass="SinglePostViewController" customModule="SendBird_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kn7-ky-CAJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMf-w3-ebY">
@@ -1631,15 +1634,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UiO-AQ-eYG">
-                                <rect key="frame" x="100" y="514" width="214" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="color_group_channel_unread_count_bg"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Edit Participation">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CkK-i7-DyM">
                                 <rect key="frame" x="100" y="123" width="214" height="205"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1672,7 +1666,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-866.39999999999998" y="4595.3523238380812"/>
+            <point key="canvasLocation" x="-557" y="4595"/>
         </scene>
     </scenes>
     <resources>

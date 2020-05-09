@@ -57,18 +57,25 @@ class SinglePostViewController: UIViewController, UIImagePickerControllerDelegat
         post["groupid"] = groupID?.channelUrl
         post["challenge"] = challengeName
         post["original"] = false
+        post["local"] = true
         post["likes"] = "0"
+        post["userWhoLiked"] = [String]()
         
         // Need to create a error if trying to add existing challenge
         
         post.saveInBackground{ (success,error) in
             if success {
                 print("success posting")
-                self.dismiss(animated: true, completion: nil)
+                self.dismiss(animated: true) {
+                    
+                }
             }else{
                 print("error posting")
             }
         }
+        
+        
+        
     }
         
     
@@ -86,11 +93,7 @@ class SinglePostViewController: UIViewController, UIImagePickerControllerDelegat
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is SingleChallengeViewController
-        {
-            let vc = segue.destination as? SingleChallengeViewController
-            vc?.tableView.reloadData()
-        }
+
         
     }
     

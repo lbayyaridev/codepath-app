@@ -58,8 +58,7 @@ class GroupChannelsViewController: UIViewController, UITableViewDelegate, UITabl
         
         SBDMain.add(self as SBDChannelDelegate, identifier: NSUUID().uuidString)
         SBDMain.add(self as SBDConnectionDelegate, identifier: NSUUID().uuidString)
-        
-   
+          
         
         
     }
@@ -438,10 +437,20 @@ class GroupChannelsViewController: UIViewController, UITableViewDelegate, UITabl
                 }
                 
                 self.channels += channels!
+                var theGroups = [String]()
+                for channel in self.channels {
+                    theGroups.append(channel.channelUrl)
+                }
+                print(theGroups)
+                PFUser.current()!["groups"] = theGroups
+                PFUser.current()?.saveInBackground()
+                
+                
                 self.groupChannelsTableView.reloadData()
                 self.refreshControl?.endRefreshing()
 
             }
+
         })
  }
     
